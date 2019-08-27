@@ -1,0 +1,711 @@
+
+question bgl_test
+	What do you want to test?;
+	choose one of test.
+
+frame bgl_test_style ;
+	default method is radio .
+	
+question blood_sugar_reading
+	Enter your average blood sugar reading in (mg/dL);
+	input number.
+
+question pre_prandial
+	Enter your blood sugar reading;
+	input number.
+
+question post_prandial
+	Enter your blood sugar reading;
+	input number.
+
+group test
+	'HbA1c', 'Pre-prandial capillary plasma glucose', 'Peak postprandial capillary plasma glucose'.
+	
+frame blood_sugar;
+	default hba1c is 0 and
+	default pre is 0 and
+	default post is 0 and
+	default hba1c_eval is '' and
+	default pre_eval is '' and
+	default post_eval is '' and 
+	default check is 0.
+	
+instance patient_bgl is a kind of blood_sugar.	
+
+rule hba1c_1
+	if patient_bgl`s hba1c is less than 7 and patient_bgl`s check is 0
+	then patient_bgl`s hba1c_eval becomes 0 and
+		patient_bgl`s check becomes 1.
+
+rule hba1c_2
+	if patient_bgl`s hba1c is greater than or equal to 7 and patient_bgl`s check is 0
+	then patient_bgl`s hba1c_eval becomes 1 and
+		patient_bgl`s check becomes 1.
+		
+rule pre_1
+	if patient_bgl`s pre is greater than or equal to 80 and 
+	patient_bgl`s pre is less than or equal to 130 and patient_bgl`s check is 0
+	then patient_bgl`s pre_eval becomes 0 and
+		patient_bgl`s check becomes 1.
+		
+rule pre_2
+	if patient_bgl`s pre is less than 80 or 
+	patient_bgl`s pre is greater than 130 and patient_bgl`s check is 0
+	then patient_bgl`s pre_eval becomes 1 and
+		patient_bgl`s check becomes 1.
+
+rule post_1
+	if patient_bgl`s post is less than 180 and patient_bgl`s check is 0
+	then patient_bgl`s post_eval becomes 0 and
+		patient_bgl`s check  becomes 1.
+		
+rule post_2
+	if patient_bgl`s post is greater than or equal to 180 and patient_bgl`s check is 0
+	then patient_bgl`s post_eval becomes 1 and
+		patient_bgl`s check becomes 1.
+	
+	
+ruleset hba1cs
+	contains hba1c_1, hba1c_2.
+	
+ruleset pre_glucose
+	contains pre_1, pre_2.
+	
+ruleset post_glucose
+	contains post_1, post_2.
+
+action bgl;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+				.tool-tip {
+				  display: inline-block;
+				  position: relative;
+				  margin-left: 0.5em;
+				}
+				.tool-tip .tool-tip__icon {
+				  background: #27b1f0;
+				  border-radius: 10px;
+				  cursor: pointer;
+				  display: inline-block;
+				  font-style: italic;
+				  font-family: times new roman;
+				  height: 20px;
+				  line-height: 1.3em;
+				  text-align: center;
+				  width: 20px;
+				}
+				.tool-tip .tool-tip__info {
+				  display: none;
+				  background: #fffbfb;
+				  border: 1px solid #27b1f0;
+				  border-radius: 3px;
+				  font-size: 0.875em;
+				  padding: 1em;
+				  position: absolute;
+				  left: 30px;
+				  top: -20px;
+				  width: 580px;
+				  z-index: 2;
+				}
+				.tool-tip .tool-tip__info:before, .tool-tip .tool-tip__info:after {
+				  content: "";
+				  position: absolute;
+				  left: -10px;
+				  top: 7px;
+				  border-style: solid;
+				  border-width: 10px 10px 10px 0;
+				  border-color: transparent #27b1f0;
+				}
+				.tool-tip .tool-tip__info:after {
+				  left: -8px;
+				  border-right-color: #262626;
+				}
+				.tool-tip .tool-tip__info .info {
+				  display: block;
+				}
+				.tool-tip .tool-tip__info .info__title {
+				  color: #000000	;
+				}
+				.tool-tip:hover .tool-tip__info, .tool-tip:focus .tool-tip__info {
+				  display: inline-block;
+				}
+
+				a:focus + .tool-tip .tool-tip__info {
+				  display: inline-block;
+				}	
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>Test your Blood Sugar(It is advisable that you visit first your physician if the test is applicable to you)<div class="tool-tip">
+            <i class="tool-tip__icon">?</i>
+            <p class="tool-tip__info">
+              <span class="info"><span class="info__title"> <strong style="font-size: 13px">Summary of glycemic recommendations for many nonpregnant adults with diabetes</strong> </span></span>
+              <span><span class="info__title"><img src="/thesis/diaplan_v2/images/diabetes.png" height="100%" width="100%"></img></span></span>
+            </p>
+          </div></th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	ask bgl_test and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>') and
+	if bgl_test is 'HbA1c'
+		then bgl_read
+		else write(' ') 
+	end if and 
+	if bgl_test is 'Pre-prandial capillary plasma glucose'
+		then pre_read 
+		else write('')
+	end if and 
+	if bgl_test is 'Peak postprandial capillary plasma glucose' 
+		then post_read
+		else write('')
+	end if.
+	
+action bgl_read;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>Test your Blood Sugar</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	do ask blood_sugar_reading and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>') and
+	check that X = hba1c(blood_sugar_reading) and 
+	patient_bgl`s hba1c becomes X and 
+	invoke ruleset hba1cs and print_res_hb.
+	
+action pre_read;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>Test your Blood Sugar (Pre-prandial capillary plasma glucose)</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	do ask blood_sugar_reading and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>') and
+	patient_bgl`s pre becomes blood_sugar_reading and 
+	invoke ruleset pre_glucose and print_res_pre.	
+
+action post_read;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>Test your Blood Sugar (Peak Postprandial capillary plasma glucose)</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	do ask blood_sugar_reading and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>') and
+	patient_bgl`s post becomes blood_sugar_reading and 
+	invoke ruleset post_glucose and print_res_post.		
+	
+action print_res_hb;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>HbA1c</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	 if patient_bgl`s hba1c_eval is 0 
+		then write('Your reading is ') and write(patient_bgl`s hba1c) and write('<br>') and 
+			write('Your A1c Level shows that your blood sugar is in the target range of less than 7. Your blood sugar is under good control')
+		else write('Your reading is ') and write(patient_bgl`s hba1c) and write('<br>') and  
+			write('You have higher risk of having complications related to diabetes. A combination of diet, exercise, and medication can bring your levels down')
+	end if and	
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+
+action print_res_pre;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>HbA1c</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	 if patient_bgl`s pre_eval is 0 
+		then write('You have met the target value for Postprandial Glucose. Your blood sugar is under good control.')
+		else write('It was shown that you have not met the target value for Pre-prandial Glucose. It seems that the food you ate, how much exercise you got, and your stress levels may negatively influence your blood sugar. Figure out whats influence your blood sugar and adjust your behaviors.')
+	end if and	
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+	
+action print_res_post;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>HbA1c</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	 if patient_bgl`s post_eval is 0 
+		then write('You have met the target value for Postprandial Glucose. Your blood sugar is under good control.')
+		else write('It was shown that you have not met the target value for Postprandial Glucose. It seems that the food you ate, how much exercise you got, and your stress levels may negatively influence your blood sugar. Figure out whats influence your blood sugar and adjust your behaviors.')
+	end if and	
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').	
+	
+function hba1c(Blood_sugar) = B
+	where B is (46.7 + Blood_sugar) / 28.7 .
+ 
+
