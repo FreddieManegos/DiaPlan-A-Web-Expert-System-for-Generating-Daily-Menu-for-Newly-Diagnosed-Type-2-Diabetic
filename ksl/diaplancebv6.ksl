@@ -1,0 +1,4308 @@
+%questions
+
+%personal questions 
+
+question name
+	Unsa imong ngalan?;
+	input name.
+
+frame name_style ;
+  default cols is 30 .
+
+question height
+	Unsa imong gitas-on? (ft);
+	choose one of height_ft.
+
+question height2
+	(in);
+	choose one of height_in.	
+
+question weight
+	Unsa imong gibug-aton?(kg);
+	input number.
+
+frame weight_style ;
+  default prefill is 0 and
+  default maximum_length is 3 and
+  default cols is 3 and
+  default lower_bound is 20 and
+  default upper_bound is 400 .	
+
+question gender
+	Unsa imong gender?;
+	choose one of gender.
+
+question activity
+	Unsa ang lebel sa imong kalihokan?;
+	choose one of activity
+	browse file '\\thesis\\diaplan_v2\\activity.html'.
+
+question bodyframe
+	Unsa ang frame sa imong lawas?;
+	choose one of body_frame
+	browse file '\\thesis\\diaplan_v2\\bodyframe.html'.
+
+group body_frame
+	'Gamay na Frame','Medium na Frame','Dako na Frame'.
+
+question meals_choices
+	Kada-adlaw na pagkaon;
+	choose some of meals.
+
+question allergies
+	Allergin;
+	choose one of allergy.
+
+question symptoms		
+	Mga Sintomas;		
+	choose one of symptom.
+
+group allergy
+	'Lactose Intolerant'.
+
+group symptom		
+		'High Blood Pressure'.
+
+frame allergies_style ;
+	default method is checkboxes and 
+	default rows is 12.
+
+frame symptoms_style ;
+	default method is checkboxes and 
+	default rows is 12.
+	
+group meals
+	'Pamahaw','Paniudto','Panihapon','Snacks'.
+
+frame meals_choices_style ;
+	default method is checkboxes and 
+	default rows is 6 and
+	default prefill is {Pamahaw,Paniudto,Panihapon,Snacks} .
+	
+group food_cho
+	breakfast, dinner, lunch.
+
+%breakfast food choice
+
+question b_starch Starches;
+	choose one of starches.
+
+question b_milk Gatas;
+	choose one of milks.
+
+question b_fruit Prutas;
+	choose one of fruits.
+
+question b_prot Protein;
+	choose one of proteins.
+
+group breakfast
+	b_milk, b_starch, b_fruit, b_prot.
+
+group breakfast_hello
+	b_starch, b_fruit, b_prot.
+
+%lunch food choice
+
+question l_starch
+	Starches;
+	choose one of starches.
+
+question l_fruit
+	Prutas;
+	choose one of fruits.
+
+question l_prot
+	Protein;
+	choose one of proteins.
+
+question l_veg
+	Utanon;
+	choose one of vegetables.
+
+group lunch
+	l_starch, l_fruit, l_prot, l_veg.
+
+%dinner food choice
+
+question d_starch
+	Starches;
+	choose one of starches.
+
+question d_fruit
+	Prutas;
+	choose one of fruits.
+
+question d_prot
+	Protein;
+	choose one of proteins.
+
+question d_veg
+	Utanon;
+	choose one of vegetables.
+
+group dinner
+	d_starch, d_fruit, d_prot, d_veg.
+
+%am snack food choice
+
+question am_fruit
+	Prutas;
+	choose one of fruits.
+
+question am_starch
+	Starches;
+	choose one of starches_snacks.
+
+question am_prot
+	Protein;
+	choose one of proteins_snacks.
+
+group amsnack
+	am_starch, am_fruit, am_prot.
+
+question pm_fruit
+	Prutas;
+	choose one of fruits.
+
+question pm_starch
+	Starches;
+	choose one of starches_snacks.
+
+question pm_prot
+	Protein;
+	choose one of proteins_snacks.
+
+group pmsnack
+	pm_starch, pm_fruit, pm_prot.
+
+%groups
+
+group gender
+	'Lalaki','Babaye'.
+
+group height_ft
+	'4','5','6'.
+
+group height_in
+	'0','1','2','3','4','5','6','7','8','9','10','11'.
+
+group activity
+	'Sedentary','Lightly Active','Moderately Active','Very Active'.
+
+%groups for food
+
+group starches
+	'American Bread', 'Bihon', 'Biskotso', 'Bonete', 'Canton', 'Cassava', 'Cereals', 'Crackers', 'Gabi','Galyetas', 'Hamburger Rolls', 'Hotdog Rolls','Lugaw','Macaroni','Mami','Miswa','Monay','Oats','Pandesal','Potato','Rice','Sotanghon','Spaghetti','Sweet Potato','Ube'.
+
+group starches_snacks
+    'American Bread', 'Bihon', 'Biskotso', 'Bonete', 'Cassava', 'Cereals', 'Crackers', 'Galyetas', 'Hamburger Rolls', 'Hotdog Rolls','Lugaw','Macaroni','Mami','Miswa','Monay','Oats','Pandesal','Potato','Sotanghon','Spaghetti','Sweet Potato','Ube'.
+
+group vegetables
+	'Acelgas','Ampalaya Fruit','Ampalaya Leaves','Baguio Beans','Bamboo shoot (Tabong)','Bataw Pods','Cabbage','Camote Leaves', 'Carrot', 'Cauliflower','Cucumber','Eggplant','Kangkong','Langka Hilaw', 'Lettuce', 'Malunggay Leaves','Mushroom','Okra','Papaya Green','Patani','Patola','Pepper Fruit', 'Petsay', 'Radish','Saluyot', 'Seaweed', 'Sigarilyas', 'Spinach', 'Squash','String Beans','Singkamas', 'Sitaw', 'Sitsaro', 'Toge','Tomato' ,'Unsoy','Upo'.
+
+group fruits
+	'Apple','Atis','Bayabas','Calamansi Juice', 'Chico','Duryan','Grapes','Guyabano','Indian Mango','Kaimito','Langka','Lansones','Manga Green','Manga Ripe','Mangostan', 'Marang','Melon','Pakwan','Papaya','Peras','Pineapple','Pinya','Rambutan','Saging (Lakatan, Latundan, Saba)','Sampaloc','Singkamas','Siniguelas','Strawberry','Suha'.
+
+group milks
+	'Milk, evap, undiluted','Milk, powdered','Milk, fresh cows','Light Low Fat Milk','Skim/Low Fat Milk','Yoghurt'.
+
+group proteins
+	'Beef','Pork','Chicken Leg','Chicken Breast','Fish (Large Varietes)','Galonggong','Kasa Dalagan Bukid', 'Sapsap','Tilapya','Tamban','Dilis','Sausage','Corned Beef','Luncheon Meat','Hotdog','Egg','Cheese','Abitsuelas','Garbanzos','Mongo','Paayap','Patani'.
+
+group proteins_snacks
+	'Sausage','Corned Beef','Luncheon Meat','Hotdog','Egg','Cheese','Abitsuelas','Garbanzos','Mongo','Paayap','Patani'.	
+
+group heights
+	height, height2.
+	
+group info
+	name, gender, height, height2, weight, activity, bodyframe, meals_choices, allergies, symptoms.
+
+frame info_style
+  default columns is 2 and
+  default maximum_length is 40 .
+
+%templates
+
+%frames and instances
+
+frame checker;
+	default fruit_check is 0 and
+	default milk_check is 0 and
+	default starch_check is 0 and
+	default protein_check is 0 and
+	default veg_check is 0 and
+	default fat_check is 0.
+	
+instance check is a kind of checker.
+
+%frame for diabetic
+
+frame diabetic;
+	default myname is '' and 
+	default height_ft is 0 and
+	default height_in is 0 and
+	default weight is 0.0 and
+	default mygender is '' and
+	default bmi_value is 0.0 and
+	default bmi_eval is '' and
+	default myactivity is '' and
+	default body_frame is '' and
+	default value is 0 and
+	default dbw is 0 and
+	default ter is 0 and
+	default cho is 0 and
+	default pro is 0 and
+	default fat is 0.
+
+instance patient is a diabetic.
+
+%frame for food and instances
+
+frame food.
+
+frame vegetable is a kind of food;
+	default serve is 1/3 and
+	default desc is 'cup' and
+	default cal is 16 and
+	default exch is 1 and
+	default ap is 0 and
+	default img is ''.
+
+frame starch is a kind of food;
+	default serve is 1/3 and
+	default desc is 'cup' and
+	default cal is 100 and
+	default exch is 1 and
+	default ap is 0 and
+	default img is ''.
+
+frame fruit is a kind of food;
+	default serve is 1 and
+	default desc is 'piece' and 
+	default cal is 40 and 
+	default exch is 1 and
+	default ap is 0 and
+	default img is ''.
+
+frame milk is a kind of food;
+	default serve is 4 and
+	default desc is 'tbsp' and
+	default cal is 125 and
+	default cal is 125 and
+	default exch is 1 and
+	default ap is 0 and
+	default img is ''.
+
+frame protein is a kind of food;
+	default serve is 1 and
+	default desc is 'slice' and
+	default cal is 86 and
+	default exch is 1 and
+	default ap is 0 and
+	default img is ''.
+
+%instance of vegetable
+
+instance acelgas is a kind of vegetable;
+	food_name is 'Acelgas' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/acelgas.jpg'.
+
+instance ampalayafruit is a kind of vegetable;
+	food_name is 'Ampalaya Fruit' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/ampalayafruit.jpg'.
+
+instance ampalayaleaves is a kind of vegetable;
+	food_name is 'Amaplaya Leaves' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/ampalayaleaves.jpg'.
+
+instance baguiobeans is a kind of vegetable;
+	food_name is 'Baguio Beans' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/baguiobeans.jpg'.
+	
+instance bambooshoot is a kind of vegetable;
+	food_name is 'Bamboo Shoot (Tabong)' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/bambooshoot.jpg'.	
+	
+instance batawpods is a kind of vegetable;
+	food_name is 'Bataw Pods' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/batawpods.jpg'.	
+
+instance cabbage is a kind of vegetable;
+	food_name is 'Cabbage' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/cabbage.jpg'.
+
+instance camoteleaves is a kind of vegetable;
+	food_name is 'Camote Leaves' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/camoteleaves.jpg'.
+	
+instance carrot is a kind of vegetable;
+	food_name is 'Carrot' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/carrot.jpg'.
+
+instance cauliflower is a kind of vegetable;
+	food_name is 'Cauliflower' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/cauliflower.jpg'.
+
+instance cucumber is a kind of vegetable;
+	food_name is 'Cucumber' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/cucumber.jpg'.	
+
+instance eggplant is a kind of vegetable;
+	food_name is 'Eggplant' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/eggplant.jpg'.
+
+instance kangkong is a kind of vegetable;
+	food_name is 'Kangkong' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/kangkong.jpg'.
+
+instance langkahilaw is a kind of vegetable;
+	food_name is 'Langka Hilaw' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/langkahilaw.jpg'.
+
+instance lettuce is a kind of vegetable;
+	food_name is 'Lettuce' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/lettuce.jpg'.
+
+instance malunggayleaves is a kind of vegetable;
+	food_name is 'Malunggay Leaves' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/malunggayleaves.jpg'.	
+
+instance mushroom is a kind of vegetable;
+	food_name is 'Mushroom' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/mushroom.jpg'.
+
+instance okra is a kind of vegetable;
+	food_name is 'Okra' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/okra.jpg'.
+
+instance papayagreen is a kind of vegetable;
+	food_name is 'Papaya Green' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/papayagreen.jpg'.
+
+instance patani is a kind of vegetable;
+	food_name is 'Patani' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/patani.jpg'.
+
+instance patola is a kind of vegetable;
+	food_name is 'Patola' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/patola.jpg'.	
+
+instance pepperfruit is a kind of vegetable;
+	food_name is 'Pepper Fruit' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/pepperfruit.jpg'.
+
+instance petsay is a kind of vegetable;
+	food_name is 'Petsay' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/petsay.jpg'.
+
+instance radish is a kind of vegetable;
+	food_name is 'Radish' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/radish.jpg'.
+
+instance saluyot is a kind of vegetable;
+	food_name is 'Saluyot' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/saluyot.jpg'.
+
+instance seaweed is a kind of vegetable;
+	food_name is 'Seaweed' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/seaweed.jpg'.	
+
+instance sigarilyas is a kind of vegetable;
+	food_name is 'Sigarilyas' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/sigarilyas.jpg'.
+
+instance spinach is a kind of vegetable;
+	food_name is 'Spinach' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/spinach.jpg'.
+
+instance squash is a kind of vegetable;
+	food_name is 'Squash' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/squash.jpg'.
+
+instance stringbeans is a kind of vegetable;
+	food_name is 'String Beans' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/stringbeans.jpg'.
+
+instance singkamas is a kind of vegetable;
+	food_name is 'Singkamas' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/singkamas.jpg'.	
+
+instance sitaw is a kind of vegetable;
+	food_name is 'Sitaw' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/sitaw.jpg'.
+
+instance sitsaro is a kind of vegetable;
+	food_name is 'Sitsaro' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/sitsaro.jpg'.
+
+instance toge is a kind of vegetable;
+	food_name is 'Toge' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/toge.jpg'.
+
+instance tomato is a kind of vegetable;
+	food_name is 'Tomato' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/tomato.jpg'.
+
+instance unsoy is a kind of vegetable;
+	food_name is 'Unsoy' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/unsoy.jpg'.		
+
+instance upo is a kind of vegetable;
+	food_name is 'Upo' and
+	serve is 0.5 and
+	desc is 'cup cooked' and
+	ap is 45 and
+	img is '/thesis/diaplan_v2/images/veg/upo.jpg'.
+
+%instance of starch
+
+instance rice is a kind of starch;
+	food_name is 'Rice' and 
+	serve is 1/2 and 
+	desc is 'cup' and
+	ap is 80 and 
+	img is '/thesis/diaplan_v2/images/starch/rice.jpg'.
+
+instance lugaw is a kind of starch;
+	food_name is 'Lugaw' and
+	serve is 1.5 and
+	desc is 'cup/s' and
+	ap is 250 and 
+	img is '/thesis/diaplan_v2/images/starch/lugaw.jpg'.
+
+instance bihon is a kind of starch;
+	food_name is 'Bihon' and
+	serve is 1  and
+	desc is 'cup/s' and
+	ap is 75 and 
+	img is '/thesis/diaplan_v2/images/starch/bihon.jpg'.
+
+instance macaroni is a kind of starch;
+	food_name is 'Macaroni' and
+	serve is 1  and
+	desc is 'cup/s' and
+	ap is 75 and 
+	img is '/thesis/diaplan_v2/images/starch/macaroni.jpg'.
+
+instance spaghetti is a kind of starch;
+	food_name is 'Spaghetti' and
+	serve is 1  and
+	desc is 'cup/s' and
+	ap is 75 and 
+	img is '/thesis/diaplan_v2/images/starch/spaghetti.jpg'.
+
+instance americanbread is a kind of starch;
+	food_name is 'American Bread' and
+	serve is 2  and
+	desc is 'hiwa' and
+	ap is 40 and 
+	img is '/thesis/diaplan_v2/images/starch/americanbread.jpg'.
+
+instance bonete is a kind of starch;
+	food_name is 'Bonete' and
+	serve is 1 and
+	desc is 'medium nga piraso' and
+	ap is 40 and 
+	img is '/thesis/diaplan_v2/images/starch/bonete.jpg'.	
+
+instance monay is a kind of starch;
+	food_name is 'Monay' and
+	serve is 1  and
+	desc is 'piraso' and
+	ap is 40 and 
+	img is '/thesis/diaplan_v2/images/starch/monay.jpg'.
+	
+instance pandesal is a kind of starch;
+	food_name is 'Pandesal' and
+	serve is 3  and
+	desc is 'pieces' and
+	ap is 40 and 
+	img is '/thesis/diaplan_v2/images/starch/pandesal.jpg'.
+	
+instance hamburgerrolls is a kind of starch;
+	food_name is 'Hamburger Rolls' and
+	serve is 1  and
+	desc is 'piraso' and
+	ap is 40 and 
+	img is '/thesis/diaplan_v2/images/starch/hamburgerrolls.jpg'.
+
+instance hotdogrolls is a kind of starch;
+	food_name is 'Hotdog Rolls' and
+	serve is 1  and
+	desc is 'piraso' and
+	ap is 40 and 
+	img is '/thesis/diaplan_v2/images/starch/hotdogrolls.jpg'.	
+	
+instance biskotso is a kind of starch;
+	food_name is 'Biskotso' and
+	serve is 2  and
+	desc is 'pieces' and
+	ap is 30 and 
+	img is '/thesis/diaplan_v2/images/starch/biskotso.jpg'.	
+
+instance crackers is a kind of starch;
+	food_name is 'Crackers' and
+	serve is 8  and
+	desc is 'pieces' and
+	ap is 35 and 
+	img is '/thesis/diaplan_v2/images/starch/crackers.jpg'.	
+
+instance galyetas is a kind of starch;
+	food_name is 'Galyetas' and
+	serve is 10  and
+	desc is 'pieces' and
+	ap is 30 and 
+	img is '/thesis/diaplan_v2/images/starch/galyetas.jpg'.	
+
+instance canton is a kind of starch;
+	food_name is 'Canton' and
+	serve is 1  and
+	desc is 'cup/s' and
+	ap is 75 and 
+	img is '/thesis/diaplan_v2/images/starch/canton.jpg'.		
+	
+instance mami is a kind of starch;
+	food_name is 'Mami' and
+	serve is 1  and
+	desc is 'cup/s' and
+	ap is 75 and 
+	img is '/thesis/diaplan_v2/images/starch/mami.jpg'.
+
+instance miswa is a kind of starch;
+	food_name is 'Miswa' and
+	serve is 1  and
+	desc is 'cup/s' and
+	ap is 75 and 
+	img is '/thesis/diaplan_v2/images/starch/miswa.jpg'.
+
+instance sotanghon is a kind of starch;
+	food_name is 'Sotanghon' and
+	serve is 1  and
+	desc is 'cup/s' and
+	ap is 75 and 
+	img is '/thesis/diaplan_v2/images/starch/sotanghon.jpg'.
+
+instance cereals is a kind of starch;
+	food_name is 'Cereals' and
+	serve is 1/2  and
+	desc is 'cup' and
+	ap is 185 and 
+	img is '/thesis/diaplan_v2/images/starch/cereals.jpg'.
+
+instance oats is a kind of starch;
+	food_name is 'Oats' and
+	serve is 5  and
+	desc is 'tablespoons' and
+	ap is 185 and 
+	img is '/thesis/diaplan_v2/images/starch/oats.jpg'.
+
+instance sweetpotato is a kind of starch;
+	food_name is 'Sweet Potato' and
+	serve is 1/2  and
+	desc is 'cup/s' and
+	ap is 185 and 
+	img is '/thesis/diaplan_v2/images/starch/sweetpotato.jpg'.	
+	
+instance cassava is a kind of starch;
+	food_name is 'Cassava' and
+	serve is 1/2 and
+	desc is 'cup/s' and
+	ap is 115 and 
+	img is '/thesis/diaplan_v2/images/starch/cassava.jpg'.
+
+instance gabi is a kind of starch;
+	food_name is 'Gabi' and
+	serve is 1/2  and
+	desc is 'cup/s' and
+	ap is 130 and 
+	img is '/thesis/diaplan_v2/images/starch/gabi.jpg'.
+
+instance potato is a kind of starch;
+	food_name is 'Potato' and
+	serve is 1/2  and
+	desc is 'cup/s' and
+	ap is 165 and 
+	img is '/thesis/diaplan_v2/images/starch/potato.jpg'.	
+	
+instance ube is a kind of starch;
+	food_name is 'Ube' and
+	serve is 1/2  and
+	desc is 'cup/s' and
+	ap is 155 and 
+	img is '/thesis/diaplan_v2/images/starch/ube.jpg'.
+
+instance wheatbread is a kind of starch;
+	food_name is 'Whole Wheat Bread' and
+	serve is 2 and
+	desc is 'pieces' and
+	ap is 45 and 
+	img is '/thesis/diaplan_v2/images/starch/wheatbread.jpg'.	
+	
+%instance of fruit
+
+
+instance apple is a kind of fruit;
+	food_name is 'Apple' and
+	serve is 1 and
+	desc is 'gagmay nga piraso' and 
+	ap is 86 and
+	img is '/thesis/diaplan_v2/images/fruit/apple.jpg'.
+	
+instance atis is a kind of fruit;
+	food_name is 'Atis' and
+	serve is 1 and
+	desc is 'gagmay nga piraso' and
+	ap is 70 and
+	img is '/thesis/diaplan_v2/images/fruit/atis.jpg'.
+
+instance bayabas is a kind of fruit;
+	food_name is 'Bayabas' and
+	serve is 2 and
+	desc is 'medium nga piraso' and
+	ap is 81 and
+	img is '/thesis/diaplan_v2/images/fruit/bayabas.jpg'.
+
+instance bucowater is a kind of fruit;
+	food_name is 'Buco Water' and
+	serve is 1 and
+	desc is 'cup/s' and 
+	ap is 180 and
+	img is '/thesis/diaplan_v2/images/fruit/bucowater.jpg'.
+	
+instance bucomeat is a kind of fruit;
+	food_name is 'Buco Meat' and
+	serve is 1/2 and
+	desc is 'cup/s' and
+	ap is 100 and
+	img is '/thesis/diaplan_v2/images/fruit/bucomeat.jpg'.
+	
+instance calamansi is a kind of fruit;
+	food_name is 'Calamansi Juice' and
+	serve is 1/2 and
+	desc is 'cup/s' and
+	img is '/thesis/diaplan_v2/images/fruit/calamansi.jpg'.
+
+instance chico is a kind of fruit;
+	food_name is 'Chico' and
+	serve is 1 and
+	desc is 'piraso' and
+	ap is 54 and
+	img is '/thesis/diaplan_v2/images/fruit/chico.jpg'.	
+
+instance duryan is a kind of fruit;
+	food_name is 'Duryan' and
+	serve is 1 and
+	desc is 'segment/s' and
+	ap is 150 and
+	img is '/thesis/diaplan_v2/images/fruit/duryan.jpg'.
+	
+instance grapes is a kind of fruit;
+	food_name is 'Grapes' and
+	serve is 10 and
+	desc is 'pieces' and
+	ap is 69 and
+	img is '/thesis/diaplan_v2/images/fruit/grapes.jpg'.
+
+instance guyabano is a kind of fruit;
+	food_name is 'Guyabano' and
+	serve is 1 and
+	desc is 'hiwa nga gagmay' and
+	ap is 86 and
+	img is '/thesis/diaplan_v2/images/fruit/guyabano.jpg'.
+	
+instance indianmango is a kind of fruit;
+	food_name is 'Indian Mango' and
+	serve is 1 and
+	desc is 'gagmay nga piraso' and
+	ap is 140 and
+	img is '/thesis/diaplan_v2/images/fruit/indianmango.jpg'.
+
+instance kaimito is a kind of fruit;
+	food_name is 'Kaimito' and
+	serve is 1/2 and
+	desc is 'medium nga piraso' and
+	ap is 123 and
+	img is '/thesis/diaplan_v2/images/fruit/kaimito.jpg'.	
+	
+instance langka is a kind of fruit;
+	food_name is 'Langka' and
+	serve is 3 and
+	desc is 'segments' and
+	ap is 118 and
+	img is '/thesis/diaplan_v2/images/fruit/langka.jpg'.
+	
+instance lansones is a kind of fruit;
+	food_name is 'Lansones' and
+	serve is 7 and
+	desc is 'medium nga piraso' and
+	ap is 103 and
+	img is '/thesis/diaplan_v2/images/fruit/lansones.jpg'.
+
+instance mangagreen is a kind of fruit;
+	food_name is 'Manga Green' and
+	serve is 1 and
+	desc is 'hiwa nga medium' and
+	ap is 90 and
+	img is '/thesis/diaplan_v2/images/fruit/mangagreen.jpg'.
+
+instance mangaripe is a kind of fruit;
+	food_name is 'Manga Ripe' and
+	serve is 1 and
+	desc is 'hiwa nga medium' and
+	ap is 103 and
+	img is '/thesis/diaplan_v2/images/fruit/mangaripe.jpg'.
+
+instance mangostan is a kind of fruit;
+	food_name is 'Mangostan' and
+	serve is 3 and
+	desc is 'gagmay nga piraso' and
+	ap is 212 and
+	img is '/thesis/diaplan_v2/images/fruit/mangostan.jpg'.	
+
+instance marang is a kind of fruit;
+	food_name is 'Marang' and
+	serve is 1/2 and
+	desc is 'medium nga piraso' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/fruit/marang.jpg'.
+	
+instance melon is a kind of fruit;
+	food_name is 'Melon' and
+	serve is 1 and
+	desc is 'hiwa' and
+	ap is 317 and
+	img is '/thesis/diaplan_v2/images/fruit/melon.jpg'.
+
+instance pakwan is a kind of fruit;
+	food_name is 'Pakwan' and
+	serve is 1 and
+	desc is 'hiwa' and
+	ap is 226 and 
+	img is '/thesis/diaplan_v2/images/fruit/pakwan.jpg'.
+
+instance papaya is a kind of fruit;
+	food_name is 'Papaya' and
+	serve is 1 and
+	desc is 'hiwa' and
+	ap is 133 and
+	img is '/thesis/diaplan_v2/images/fruit/papaya.jpg'.
+
+instance peras is a kind of fruit;
+	food_name is 'Peras' and
+	serve is 1 and
+	desc is 'medium nga piraso' and
+	ap is 118 and
+	img is '/thesis/diaplan_v2/images/fruit/peras.jpg'.	
+
+instance pinya is a kind of fruit;
+	food_name is 'Pinya' and
+	serve is 1 and
+	desc is 'hiwa' and
+	ap is 129 and
+	img is '/thesis/diaplan_v2/images/fruit/pinya.jpg'.
+	
+instance rambutan is a kind of fruit;
+	food_name is 'Rambutan' and
+	serve is 8 and
+	desc is 'piraso' and
+	ap is 139 and
+	img is '/thesis/diaplan_v2/images/fruit/rambutan.jpg'.
+
+instance saging is a kind of fruit;
+	food_name is 'Saging (Lakatan, Latundan, Saba)' and
+	serve is 1 and
+	desc is 'gagmay nga piraso' and
+	ap is 40 and
+	img is '/thesis/diaplan_v2/images/fruit/saging.jpg'.
+
+instance sampaloc is a kind of fruit;
+	food_name is 'Sampaloc' and
+	serve is 2 and
+	desc is 'medium nga piraso' and
+	img is '/thesis/diaplan_v2/images/fruit/sampaloc.jpg'.
+
+instance singkamas is a kind of fruit;
+	food_name is 'Singkamas' and
+	serve is 5 and
+	desc is 'gagmay nga piraso' and
+	ap is 124 and
+	img is '/thesis/diaplan_v2/images/fruit/singkamas.jpg'.	
+	
+instance siniguelas is a kind of fruit;
+	food_name is 'Siniguelas' and
+	serve is 1 and
+	desc is 'gagmay nga piraso' and
+	ap is 78 and
+	img is '/thesis/diaplan_v2/images/fruit/siniguelas.jpg'.
+	
+instance strawberry is a kind of fruit;
+	food_name is 'Strawberry' and
+	serve is 1.25 and
+	desc is 'cups' and
+	ap is 168 and
+	img is '/thesis/diaplan_v2/images/fruit/strawberry.jpg'.
+
+instance suha is a kind of fruit;
+	food_name is 'Suha' and
+	serve is 3 and
+	desc is 'segments' and
+	ap is 160 and
+	img is '/thesis/diaplan_v2/images/fruit/suha.jpg'.
+
+%instance of milk
+
+instance evap_undil is a kind of milk;
+	food_name is 'Milk, evap, undiluted' and
+	serve is 0.5 and 
+	desc is 'cup' and 
+	ap is 125 and
+	img is '/thesis/diaplan_v2/images/milk/milk.jpg'.
+
+instance powdered is a kind of milk;
+	food_name is 'Milk, powdered' and
+	serve is 0.25 and
+	desc is 'cup' and 
+	ap is 30 and
+	img is '/thesis/diaplan_v2/images/milk/milk.jpg'.
+	
+instance skim is a kind of milk;
+	food_name is 'Skim/Low Fat Milk' and
+	serve is 4 and
+	desc is 'tablespoons' and 
+	ap is 250 and
+	img is '/thesis/diaplan_v2/images/milk/milk.jpg'.
+	
+instance lightlowfat is a kind of milk;
+	food_name is 'Light Low Fat Milk' and
+	serve is 1 and
+	desc is 'tetra brick/s' and 
+	ap is 250 and
+	img is '/thesis/diaplan_v2/images/milk/milk.jpg'.
+
+instance fresh_cows is a kind of milk;
+	food_name is 'Milk, fresh cows' and
+	serve is 1 and
+	desc is 'cup' and 
+	ap is 250 and
+	img is '/thesis/diaplan_v2/images/milk/milk.jpg'.
+
+instance yoghurt is a kind of milk;
+	food_name is 'Yoghurt' and
+	serve is 1/2 and
+	desc is 'cup' and 
+	ap is 125 and
+	img is '/thesis/diaplan_v2/images/milk/milk.jpg'.
+
+%instance of protein
+
+instance beef is a kind of protein;
+	food_name is 'Beef' and
+	serve is 1 and
+	desc is 'hiwa ( Usa ka hiwa = gidak-on sa kahon sa posporo)' and
+	ap is 30 and
+	img is '/thesis/diaplan_v2/images/prot/beef.jpg'.
+
+instance cheese is a kind of protein;
+	food_name is 'Cheese' and
+	serve is 1 and
+	desc is 'hiwa' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/prot/cheese.jpg'.
+
+instance chickenleg is a kind of protein;
+	food_name is 'Chicken Leg' and
+	serve is 1 and
+	desc is 'leg/s' and
+	ap is 30 and
+	img is '/thesis/diaplan_v2/images/prot/chickenleg.jpg'.
+	
+instance chickenbreast is a kind of protein;
+	food_name is 'Chicken Breast' and
+	serve is 1/2 and
+	desc is 'breast' and
+	ap is 30 and
+	img is '/thesis/diaplan_v2/images/prot/chickenbreast.jpg'.
+
+instance cornedbeef is a kind of protein;
+	food_name is 'Corned Beef' and
+	serve is 3 and
+	desc is 'teaspoons' and
+	ap is 40 and
+	img is '/thesis/diaplan_v2/images/prot/cornedbeef.jpg'.
+
+instance dilis is a kind of protein;
+	food_name is 'Dilis' and
+	serve is 1/2 and
+	desc is 'cup' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/prot/dilis.jpg'.
+
+instance egg is a kind of protein;
+	food_name is 'Egg' and
+	serve is 1 and
+	desc is 'piraso' and
+	ap is 60 and
+	img is '/thesis/diaplan_v2/images/prot/egg.jpg'.
+
+instance fish is a kind of protein;
+	food_name is 'Fish (Large Varietes)' and
+	serve is 1 and
+	desc is 'slice' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/prot/fish.jpg'.
+	
+instance galonggong is a kind of protein;
+	food_name is 'Galonggong' and
+	serve is 1 and
+	desc is 'piraso' and
+	ap is 30 and
+	img is '/thesis/diaplan_v2/images/prot/galonggong.jpg'.
+	
+instance garbanzos is a kind of protein;
+	food_name is 'Garbanzos' and
+	serve is 1/2 and
+	desc is 'cup/s' and
+	ap is 65 and
+	img is '/thesis/diaplan_v2/images/prot/garbanzos.jpg'.
+
+instance hotdog is a kind of protein;
+	food_name is 'Hotdog' and
+	serve is 2 and
+	desc is 'pieces' and
+	ap is 70 and
+	img is '/thesis/diaplan_v2/images/prot/hotdog.jpg'.
+
+instance kasadalaganbukid is a kind of protein;
+	food_name is 'Kasa Dalagan Bukid' and
+	serve is 1 and
+	desc is 'peice/s' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/prot/kasadalaganbukid.jpg'.
+	
+instance luncheonmeat is a kind of protein;
+	food_name is 'Luncheon Meat' and
+	serve is 2 and
+	desc is 'hiwa' and
+	ap is 55 and
+	img is '/thesis/diaplan_v2/images/prot/luncheonmeat.jpg'.
+	
+instance mongo is a kind of protein;
+	food_name is 'Mongo' and
+	serve is 3/4 and
+	desc is 'cup/s' and
+	ap is 75 and
+	img is '/thesis/diaplan_v2/images/prot/mongo.jpg'.
+
+instance paayap is a kind of protein;
+	food_name is 'Paayap' and
+	serve is 1/2 and
+	desc is 'cup/s' and
+	ap is 65 and
+	img is '/thesis/diaplan_v2/images/prot/paayap.jpg'.
+
+instance patani is a kind of protein;
+	food_name is 'Patani' and
+	serve is 1/2 and
+	desc is 'cup/s' and
+	ap is 75 and
+	img is '/thesis/diaplan_v2/images/prot/patani.jpg'.
+
+instance pork is a kind of protein;
+	food_name is 'Pork' and
+	serve is 1 and
+	desc is 'hiwa ( Usa ka hiwa = gidak-on sa kahon sa posporo)' and
+	ap is 30 and
+	img is '/thesis/diaplan_v2/images/prot/pork.jpg'.
+
+instance sapsap is a kind of protein;
+	food_name is 'Sapsap' and
+	serve is 3 and
+	desc is 'pieces' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/prot/sapsap.jpg'.
+	
+instance sausage is a kind of protein;
+	food_name is 'Sausage' and
+	serve is 4 and
+	desc is 'pieces' and
+	ap is 70 and
+	img is '/thesis/diaplan_v2/images/prot/sausage.jpg'.
+
+instance tamban is a kind of protein;
+	food_name is 'Tamban' and
+	serve is 1.5 and
+	desc is 'pieces' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/prot/tamban.jpg'.		
+
+instance tilapya is a kind of protein;
+	food_name is 'Tilapya' and
+	serve is 3 and
+	desc is 'pieces' and
+	ap is 35 and
+	img is '/thesis/diaplan_v2/images/prot/tilapya.jpg'.			
+
+%frame for food_serve
+
+frame food_serve;
+	default owner is '' and
+	default veg_serve is 0 and
+	default starch_serve is 0 and
+	default fruit_serve is 0 and
+	default milk_serve is 0 and
+	default protein_serve is 0 and
+	default fat_serve is 0.
+
+instance food_serve_1 is a kind of food_serve.
+
+%frame for meal_serve
+
+frame meal_serve;
+	default break_fruit_exc is 0 and 
+	default break_milk_exc is 0 and
+	default break_rice_exc is 0 and
+	default break_prot_exc is 0 and
+	default am_snack_rice_exc is 0 and
+	default am_snack_prot_exc is 0 and
+	default am_snack_fruit_exc is 0 and
+	default lunch_veg_exc is 0 and
+	default lunch_prot_exc is 0 and
+	default lunch_rice_exc is 0 and
+	default lunch_fruit_exc is 0 and
+	default pm_snack_rice_exc is 0 and
+	default pm_snack_prot_exc is 0 and
+	default pm_snack_fruit_exc is 0 and
+	default dinner_veg_exc is 0 and
+	default dinner_prot_exc is 0 and
+	default dinner_rice_exc is 0 and
+	default dinner_fruit_exc is 0.
+
+instance meal_serve_1 is a kind of meal_serve.
+
+%rule to change the inputs
+
+%rule of bmi
+
+rule check_bmi1
+	if the patient`s bmi_value is less than 18.5
+	then the patient`s bmi_eval becomes underweight.
+
+rule check_bmi2
+	if the patient`s bmi_value is greater than or equal to 18.5 and
+	the patient`s bmi_value is less than or equal to 25.0
+	then patient`s bmi_eval becomes normal.
+
+rule check_bmi3
+	if the patient`s bmi_value is greater than 25.0 and
+	the patient`s bmi_value is less than 30.0
+	then the patient`s bmi_eval becomes overweight.
+
+rule check_bmi4
+	if the patient`s bmi_value is greater than or equal to 30.0
+	then the patient`s bmi_eval becomes obese.
+
+%rules for value
+
+rule value_1
+	if activity is 'Sedentary' and the patient`s bmi_eval is overweight
+	then the patient`s value becomes 25.
+
+rule value_2
+	if activity is 'Lightly Active' and the patient`s bmi_eval is overweight or
+	activity is 'Sedentary' and the patient`s bmi_eval is normal 
+	then the patient`s value becomes 30.
+
+rule value_3
+	if activity is 'Moderately Active' and the patient`s bmi_eval is overweight or
+	activity is 'Lightly Active' and the patient`s bmi_eval is normal or
+	activity is 'Sedentary' and the patient`s bmi_eval is underweight
+	then the patient`s value becomes 35.
+
+rule value_4
+	if activity is 'Very Active' and the patient`s bmi_eval is overweight or
+	activity is 'Moderately Active' and the patient`s bmi_eval is normal or
+	activity is 'Lightly Active' and the patient`s bmi_eval is underweight
+	then the patient`s value becomes 40.
+
+rule value_5
+	if activity is 'Very Active' and the patient`s bmi_eval is normal or
+	activity is 'Moderately Active' and the patient`s bmi_eval is underweight 
+	then the patient`s value becomes 45.
+
+rule value_6
+	if activity is 'Very Active' and the patient`s bmi_eval is underweight
+	then the patient`s value becomes 50.
+
+%rule for food serve
+
+%milk
+
+%rule for fruit
+
+rule fruit_1
+if 	patient`s cho is greater than or equal to 130 and 
+	patient`s cho is less than 160 and 
+	check`s fruit_check is 0 
+then
+	food_serve`s fruit_serve becomes 3 and 
+	patient`s cho becomes its cho - 30 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_2
+if 	patient`s cho is greater than or equal to 160 and 
+	patient`s cho is less than 180 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 3.5 and 
+	patient`s cho becomes its cho - 35 and 
+	check`s fruit_check becomes 1.	
+
+rule fruit_3
+if 	patient`s cho is greater than or equal to 180 and 
+	patient`s cho is less than 215 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 4 and 
+	patient`s cho becomes its cho - 40 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_4
+if 	patient`s cho is greater than or equal to 215 and 
+	patient`s cho is less than 235 and 
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 4.5 and 
+	patient`s cho becomes its cho - 45 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_5
+if 	patient`s cho is greater than or equal to 235 and 
+	patient`s cho is less than 260 and 
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 5 and 
+	patient`s cho becomes its cho - 50 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_6
+if 	patient`s cho is greater than or equal to 260 and 
+	patient`s cho is less than 290 and 
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 5.5 and 
+	patient`s cho becomes its cho - 55 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_7
+if 	patient`s cho is greater than or equal to 290 and 
+	patient`s cho is less than 315 and
+	check`s fruit_check is 0  
+then
+	food_serve`s fruit_serve becomes 6 and 
+	patient`s cho becomes its cho - 60 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_8
+if 	patient`s cho is greater than or equal to 315 and 
+	patient`s cho is less than 335 and 
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 6.5 and 
+	patient`s cho becomes its cho - 65 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_9
+if 	patient`s cho is greater than or equal to 335 and 
+	patient`s cho is less than 360 and 
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 7 and 
+	patient`s cho becomes its cho - 70 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_10
+if 	patient`s cho is greater than or equal to 360 and 
+	patient`s cho is less than 389 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 7.5 and 
+	patient`s cho becomes its cho - 75 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_11
+if 	patient`s cho is greater than or equal to 389 and 
+	patient`s cho is less than 415 and 
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 8 and 
+	patient`s cho becomes its cho - 80 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_12
+if 	patient`s cho is greater than or equal to 415 and 
+	patient`s cho is less than 435 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 8.5 and 
+	patient`s cho becomes its cho - 85 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_13
+if 	patient`s cho is greater than or equal to 435 and 
+	patient`s cho is less than 465 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 9 and 
+	patient`s cho becomes its cho - 90 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_14
+if 	patient`s cho is greater than or equal to 465 and 
+	patient`s cho is less than 485 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 9.5 and 
+	patient`s cho becomes its cho - 95 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_15
+if 	patient`s cho is greater than or equal to 485 and 
+	patient`s cho is less than 512 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 10 and 
+	patient`s cho becomes its cho - 100 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_16
+if 	patient`s cho is greater than or equal to 512 and 
+	patient`s cho is less than 545 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 10.5 and 
+	patient`s cho becomes its cho - 105 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_17
+if 	patient`s cho is greater than or equal to 545 and 
+	patient`s cho is less than 570 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 11 and 
+	patient`s cho becomes its cho - 110 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_18
+if 	patient`s cho is greater than or equal to 570 and 
+	patient`s cho is less than 590 and
+	check`s fruit_check is 0
+then
+	food_serve`s fruit_serve becomes 11.5 and 
+	patient`s cho becomes its cho - 115 and 
+	check`s fruit_check becomes 1.
+
+rule fruit_19
+if 	patient`s cho is greater than or equal to 590 and 
+	patient`s cho is less than 595 and
+	check`s fruit_check is 0	
+then
+	food_serve`s fruit_serve becomes 12 and 
+	patient`s cho becomes its cho - 120 and 
+	check`s fruit_check becomes 1.
+
+%rule for milk	
+
+rule milk
+	if patient`s ter is greater than 0
+	then	food_serve`s milk_serve becomes 1 and
+		patient`s cho := patient`s cho - 12 and
+		patient`s pro := patient`s pro - 8 and
+		patient`s fat := patient`s fat - 5. 
+
+%rule for starch
+
+rule starch_1
+if patient`s cho is greater than or equal to 90 and
+	patient`s cho is less than 110 
+	then food_serve`s starch_serve becomes 4 and
+		patient`s cho := patient`s cho - 92 and
+		patient`s pro := patient`s pro - 8 .
+		
+rule starch_2
+	if patient`s cho is greater than or equal to 110 and
+		patient`s cho is less than 120 
+	then food_serve`s starch_serve becomes 4.5 and
+		patient`s cho := patient`s cho - 103.5 and
+		patient`s pro := patient`s pro - 9 .
+
+rule starch_3
+	if patient`s cho is greater than or equal to 120 and
+		patient`s cho is less than 140 
+	then food_serve`s starch_serve becomes 5 and
+		patient`s cho := patient`s cho - 115 and
+		patient`s pro := patient`s pro - 10.
+
+rule starch_4
+	if patient`s cho is greater than or equal to 140 and
+		patient`s cho is less than 150 
+	then food_serve`s starch_serve becomes 5.5 and
+		patient`s cho := patient`s cho - 126.5 and
+		patient`s pro := patient`s pro - 11.
+
+rule starch_5
+	if patient`s cho is greater than or equal to 150 and
+		patient`s cho is less than 160 
+	then food_serve`s starch_serve becomes 6 and
+		patient`s cho := patient`s cho - 138 and
+		patient`s pro := patient`s pro - 12.
+
+rule starch_6
+	if patient`s cho is greater than or equal to 160 and
+		patient`s cho is less than 180 
+	then food_serve`s starch_serve becomes 6.5 and
+		patient`s cho := patient`s cho - 149.5 and
+		patient`s pro := patient`s pro - 13.
+
+rule starch_7
+	if patient`s cho is greater than or equal to 180 and
+		patient`s cho is less than 185 
+	then food_serve`s starch_serve becomes 7 and
+		patient`s cho := patient`s cho - 161 and
+		patient`s pro := patient`s pro - 14.
+
+rule starch_8
+	if patient`s cho is greater than or equal to 185 and
+		patient`s cho is less than 195 
+	then food_serve`s starch_serve becomes 7.5 and
+		patient`s cho := patient`s cho - 172.5 and
+		patient`s pro := patient`s pro - 15.
+
+rule starch_10
+	if patient`s cho is greater than or equal to 195 and
+		patient`s cho is less than 210 
+	then food_serve`s starch_serve becomes 8 and nl and
+		patient`s cho becomes its cho - 184 and
+		patient`s pro := patient`s pro - 16.
+
+rule starch_11
+	if patient`s cho is greater than or equal to 210 and
+		patient`s cho is less than 220 
+	then food_serve`s starch_serve becomes 8.5 and
+		patient`s cho := patient`s cho - 195.5 and
+		patient`s pro := patient`s pro - 17.
+
+rule starch_12
+	if patient`s cho is greater than or equal to 220 and
+		patient`s cho is less than 230 
+	then food_serve`s starch_serve becomes 9 and
+		patient`s cho := patient`s cho - 207 and
+		patient`s pro := patient`s pro - 18.
+
+rule starch_13
+	if patient`s cho is greater than or equal to 230 and
+		patient`s cho is less than 245 
+	then food_serve`s starch_serve becomes 9.5 and
+		patient`s cho := patient`s cho - 218.5 and
+		patient`s pro := patient`s pro - 19.
+
+rule starch_14
+	if patient`s cho is greater than or equal to 245 and
+		patient`s cho is less than 260 
+	then food_serve`s starch_serve becomes 10 and
+		patient`s cho := patient`s cho - 230 and
+		patient`s pro := patient`s pro - 20.
+
+rule starch_15
+	if patient`s cho is greater than or equal to 260 and
+		patient`s cho is less than 268 
+	then food_serve`s starch_serve becomes 10.5 and
+		patient`s cho := patient`s cho - 241.5 and
+		patient`s pro := patient`s pro - 21.
+
+rule starch_16
+	if patient`s cho is greater than or equal to 268 and
+		patient`s cho is less than 279 
+	then food_serve`s starch_serve becomes 11 and
+		patient`s cho := patient`s cho - 253 and
+		patient`s pro := patient`s pro - 22.
+
+rule starch_17
+	if patient`s cho is greater than or equal to 279 and
+		patient`s cho is less than 290 
+	then food_serve`s starch_serve becomes 11.5 and
+		patient`s cho := patient`s cho - 264.5 and
+		patient`s pro := patient`s pro - 23.
+
+rule starch_18
+	if patient`s cho is greater than or equal to 290 and
+		patient`s cho is less than 300 
+	then food_serve`s starch_serve becomes 12 and
+		patient`s cho := patient`s cho - 276 and
+		patient`s pro := patient`s pro - 24.
+
+rule starch_19
+	if patient`s cho is greater than or equal to 300 and
+		patient`s cho is less than 315 
+	then food_serve`s starch_serve becomes 12.5 and
+		patient`s cho := patient`s cho - 287.5 and
+		patient`s pro := patient`s pro - 25.
+
+rule starch_20
+	if patient`s cho is greater than or equal to 315 and
+		patient`s cho is less than 320 
+	then food_serve`s starch_serve becomes 13 and
+		patient`s cho := patient`s cho - 299 and
+		patient`s pro := patient`s pro - 26.
+
+rule starch_21
+	if patient`s cho is greater than or equal to 320 and
+		patient`s cho is less than 335 
+	then food_serve`s starch_serve becomes 13.5 and
+		patient`s cho := patient`s cho - 310.5 and
+		patient`s pro := patient`s pro - 27.
+
+rule starch_22
+	if patient`s cho is greater than or equal to 335 and
+		patient`s cho is less than 346 
+	then food_serve`s starch_serve becomes 14 and
+		patient`s cho := patient`s cho - 322 and
+		patient`s pro := patient`s pro - 28.
+
+rule starch_23
+	if patient`s cho is greater than or equal to 346 and
+		patient`s cho is less than 365 
+	then food_serve`s starch_serve becomes 14.5 and
+		patient`s cho := patient`s cho - 333.5 and
+		patient`s pro := patient`s pro - 29.
+
+rule starch_24
+	if patient`s cho is greater than or equal to 365 and
+		patient`s cho is less than 370 
+	then food_serve`s starch_serve becomes 15 and
+		patient`s cho := patient`s cho - 345 and
+		patient`s pro := patient`s pro - 30.
+
+rule starch_25
+	if patient`s cho is greater than or equal to 370 and
+		patient`s cho is less than 380 
+	then food_serve`s starch_serve becomes 15.5 and
+		patient`s cho := patient`s cho - 356.5 and
+		patient`s pro := patient`s pro - 31.
+
+rule starch_26
+	if patient`s cho is greater than or equal to 380 and
+		patient`s cho is less than 395
+	then food_serve`s starch_serve becomes 16 and
+		patient`s cho := patient`s cho - 368 and
+		patient`s pro := patient`s pro - 32.
+
+rule starch_27
+	if patient`s cho is greater than or equal to 395 and
+		patient`s cho is less than 400 
+	then food_serve`s starch_serve becomes 16.5 and
+		patient`s cho := patient`s cho - 379.5 and
+		patient`s pro := patient`s pro - 33.
+
+rule starch_28
+	if patient`s cho is greater than or equal to 400 and
+		patient`s cho is less than 415 
+	then food_serve`s starch_serve becomes 17 and
+		patient`s cho := patient`s cho - 391 and
+		patient`s pro := patient`s pro - 34.
+
+rule starch_29
+	if patient`s cho is greater than or equal to 415 and
+		patient`s cho is less than 430 
+	then food_serve`s starch_serve becomes 17.5 and
+		patient`s cho := patient`s cho - 414 and
+		patient`s pro := patient`s pro - 36.
+		
+rule starch_30
+	if patient`s cho is greater than or equal to 430 and
+		patient`s cho is less than 450 
+	then food_serve`s starch_serve becomes 18 and
+		patient`s cho := patient`s cho - 425.5 and
+		patient`s pro := patient`s pro - 37.
+		
+rule starch_31
+	if patient`s cho is greater than or equal to 450 and
+		patient`s cho is less than 465 
+	then food_serve`s starch_serve becomes 19 and
+		patient`s cho := patient`s cho - 437 and
+		patient`s pro := patient`s pro - 38.	
+
+rule starch_32
+	if patient`s cho is greater than or equal to 465 and
+		patient`s cho is less than 480 
+	then food_serve`s starch_serve becomes 19.5 and
+		patient`s cho := patient`s cho - 448.5 and
+		patient`s pro := patient`s pro - 39.		
+
+		
+% Rules for Protein		
+rule protein_1
+	if patient`s pro is greater than or equal to 20 and 
+		patient`s pro is less than 25
+	then food_serve`s protein_serve becomes 2 and
+		patient`s pro becomes its pro - 16 and
+		patient`s fat becomes its fat - 12.
+		
+rule protein_2
+	if patient`s pro is greater than or equal to  25 and 
+		patient`s pro is less than 30
+	then food_serve`s protein_serve becomes 2.5 and
+		patient`s pro becomes its pro - 20 and
+		patient`s fat becomes its fat - 15.
+
+rule protein_3
+	if patient`s pro is greater than or equal to  30 and 
+		patient`s pro is less than 33
+	then food_serve`s protein_serve becomes 3 and
+		patient`s pro becomes its pro - 24 and
+		patient`s fat becomes its fat - 18.
+
+rule protein_4
+	if patient`s pro is greater than or equal to  33 and 
+		patient`s pro is less than  35
+	then food_serve`s protein_serve becomes 3.5 and
+		patient`s pro becomes its pro - 28 and
+		patient`s fat becomes its fat - 21.
+
+rule protein_5
+	if patient`s pro is greater than or equal to  35 and 
+		patient`s pro is less than 40
+	then food_serve`s protein_serve becomes 4 and
+		patient`s pro becomes its pro - 32 and
+		patient`s fat becomes its fat - 24.
+
+rule protein_6
+	if patient`s pro is greater than or equal to  40 and 
+		patient`s pro is less than  44
+	then food_serve`s protein_serve becomes 4.5 and
+		patient`s pro becomes its pro - 36 and
+		patient`s fat becomes its fat - 27.
+
+rule protein_7
+	if patient`s pro is greater than or equal to 44 and 
+		patient`s pro is less than  48
+	then food_serve`s protein_serve becomes 5 and
+		patient`s pro becomes its pro - 40 and
+		patient`s fat becomes its fat - 30.
+
+rule protein_8
+	if patient`s pro is greater than  or equal to 48 and 
+		patient`s pro is less than  53
+	then food_serve`s protein_serve becomes 5.5 and
+		patient`s pro becomes its pro - 44 and
+		patient`s fat becomes its fat - 33.
+
+rule protein_9
+	if patient`s pro is greater than or equal to  53 and 
+		patient`s pro is less than  59
+	then food_serve`s protein_serve becomes 6 and
+		patient`s pro becomes its pro - 48 and
+		patient`s fat becomes its fat - 36.
+
+rule protein_10
+	if patient`s pro is greater than or equal to 59 and 
+		patient`s pro is less than  62
+	then food_serve`s protein_serve becomes 6.5 and
+		patient`s pro becomes its pro - 52 and
+		patient`s fat becomes its fat - 39.
+
+rule protein_11
+	if patient`s pro is greater than or equal to 62 and 
+		patient`s pro is less than  66
+	then food_serve`s protein_serve becomes 7 and
+		patient`s pro becomes its pro - 56 and
+		patient`s fat becomes its fat - 42.
+
+rule protein_12
+	if patient`s pro is greater than or equal to 66 and 
+		patient`s pro is less than  72
+	then food_serve`s protein_serve becomes 7.5 and
+		patient`s pro becomes its pro - 60 and
+		patient`s fat becomes its fat - 45.
+
+rule protein_13
+	if patient`s pro is greater than or equal to 72 and 
+		patient`s pro is less than  75
+	then food_serve`s protein_serve becomes 8 and
+		patient`s pro becomes its pro - 64 and
+		patient`s fat becomes its fat - 48.
+
+rule protein_14
+	if patient`s pro is greater than or equal to 75 and 
+		patient`s pro is less than  80
+	then food_serve`s protein_serve becomes 8.5 and
+		patient`s pro becomes its pro - 68 and
+		patient`s fat becomes its fat - 51.
+
+rule protein_15
+	if patient`s pro is greater than or equal to 80 and 
+		patient`s pro is less than 85
+	then food_serve`s protein_serve becomes 9 and
+		patient`s pro becomes its pro - 72 and
+		patient`s fat becomes its fat - 54.
+
+rule protein_16
+	if patient`s pro is greater than or equal to 85 and 
+		patient`s pro is less than 88
+	then food_serve`s protein_serve becomes 9.5 and
+		patient`s pro becomes its pro - 76 and
+		patient`s fat becomes its fat - 57.
+
+rule protein_17
+	if patient`s pro is greater than or equal to 88 and 
+		patient`s pro is less than 90
+	then food_serve`s protein_serve becomes 10 and
+		patient`s pro becomes its pro - 80 and
+		patient`s fat becomes its fat - 60.	
+
+rule protein_18
+	if patient`s pro is greater than or equal to 90 and 
+		patient`s pro is less than 95
+	then food_serve`s protein_serve becomes 10.5 and
+		patient`s pro becomes its pro - 84 and
+		patient`s fat becomes its fat - 63.		
+
+rule protein_19
+	if patient`s pro is greater than or equal to 95 and 
+		patient`s pro is less than 99
+	then food_serve`s protein_serve becomes 11 and
+		patient`s pro becomes its pro - 88 and
+		patient`s fat becomes its fat - 66.		
+
+rule protein_20
+	if patient`s pro is greater than or equal to 99  and 
+		patient`s pro is less than 104
+	then food_serve`s protein_serve becomes 11.5 and
+		patient`s pro becomes its pro - 92 and
+		patient`s fat becomes its fat - 69.	
+
+rule protein_21
+	if patient`s pro is greater than or equal to 104 and 
+		patient`s pro is less than 110
+	then food_serve`s protein_serve becomes 12 and
+		patient`s pro becomes its pro - 96 and
+		patient`s fat becomes its fat - 72.			
+
+%Rules for Vegetables
+
+rule veg_1
+	if patient`s cho  is greater than or equal to 9 and
+		patient`s cho is less than 10.5
+	then 
+		food_serve`s veg_serve becomes 3 and
+		patient`s cho becomes its cho - 9 and
+		patient`s pro becomes its pro - 3.
+	
+rule veg_2
+	if patient`s cho  is greater than or equal to 10.5 and
+		patient`s cho is less than 12
+	then 
+		food_serve`s veg_serve becomes 3.5 and
+		patient`s cho becomes its cho - 10.5 and
+		patient`s pro becomes its pro - 3.5.		
+		
+rule veg_3
+	if patient`s cho  is greater than or equal to 12 and
+		patient`s cho is less than 13.5
+	then 
+		food_serve`s veg_serve becomes 4 and
+		patient`s cho becomes its cho - 12 and
+		patient`s pro becomes its pro - 4.
+
+rule veg_4
+	if patient`s cho  is greater than or equal to 13.5 and
+		patient`s cho is less than 15
+	then 
+		food_serve`s veg_serve becomes 4.5 and
+		patient`s cho becomes its cho - 13.5 and
+		patient`s pro becomes its pro - 4.5.
+
+rule veg_5
+	if patient`s cho  is greater than or equal to 15 and
+		patient`s cho is less than 16.5
+	then 
+		food_serve`s veg_serve becomes 5 and
+		patient`s cho becomes its cho - 15 and
+		patient`s pro becomes its pro - 5.
+
+rule veg_6
+	if patient`s cho  is greater than or equal to 16.5 and
+		patient`s cho is less than 18
+	then 
+		food_serve`s veg_serve becomes 5.5 and
+		patient`s cho becomes its cho - 16.5 and
+		patient`s pro becomes its pro - 5.5.	
+
+rule veg_7
+	if patient`s cho  is greater than or equal to 18 and
+		patient`s cho is less than 19.5
+	then 
+		food_serve`s veg_serve becomes 6 and
+		patient`s cho becomes its cho - 18 and
+		patient`s pro becomes its pro - 6.
+	
+rule veg_8
+	if patient`s cho  is greater than or equal to 19.5 and
+		patient`s cho is less than 21
+	then 
+		food_serve`s veg_serve becomes 6.5 and
+		patient`s cho becomes its cho - 19.5 and
+		patient`s pro becomes its pro - 6.5.		
+		
+rule veg_9
+	if patient`s cho  is greater than or equal to 21 and
+		patient`s cho is less than 22.5
+	then 
+		food_serve`s veg_serve becomes 7 and
+		patient`s cho becomes its cho - 21 and
+		patient`s pro becomes its pro - 7.
+
+rule veg_10
+	if patient`s cho  is greater than or equal to 22.5 and
+		patient`s cho is less than 24
+	then 
+		food_serve`s veg_serve becomes 7.5 and
+		patient`s cho becomes its cho - 22.5 and
+		patient`s pro becomes its pro - 7.5.
+
+rule veg_11
+	if patient`s cho  is greater than or equal to 24 and
+		patient`s cho is less than 25.5
+	then 
+		food_serve`s veg_serve becomes 8 and
+		patient`s cho becomes its cho - 24 and
+		patient`s pro becomes its pro - 8.
+
+rule veg_12
+	if patient`s cho  is greater than or equal to 25.5 and
+		patient`s cho is less than 27
+	then 
+		food_serve`s veg_serve becomes 8.5 and
+		patient`s cho becomes its cho - 25.5 and
+		patient`s pro becomes its pro - 8.5.
+		
+% Rules for fat
+
+rule fat_1
+	if patient`s fat is greater than or equal to 9.5 and
+		patient`s fat is less than 12.5
+	then
+		food_serve`s fat_serve becomes 2 and
+		patient`s fat becomes its fat - 10 .
+
+rule fat_2
+	if patient`s fat is greater than or equal to 12.5 and
+		patient`s fat is less than 14.5
+	then
+		food_serve`s fat_serve becomes 2.5 and
+		patient`s fat becomes its fat - 12.5 .
+
+rule fat_3
+	if patient`s fat is greater than or equal to 14.5 and
+		patient`s fat is less than 17.5
+	then
+		food_serve`s fat_serve becomes 3 and
+		patient`s fat becomes its fat - 15 .
+
+rule fat_4
+	if patient`s fat is greater than or equal to 17.5 and
+		patient`s fat is less than 19.5
+	then
+		food_serve`s fat_serve becomes 3.5 and
+		patient`s fat becomes its fat - 17.5 .
+
+rule fat_5
+	if patient`s fat is greater than or equal to 19.5 and
+		patient`s fat is less than 22.5
+	then
+		food_serve`s fat_serve becomes 4 and
+		patient`s fat becomes its fat - 20 .		
+		
+rule fat_6
+	if patient`s fat is greater than or equal to 22.5 and
+		patient`s fat is less than 24.5
+	then
+		food_serve`s fat_serve becomes 4.5 and
+		patient`s fat becomes its fat - 22.5 .		
+	
+rule fat_7
+	if patient`s fat is greater than or equal to 24.5 and
+		patient`s fat is less than 27.5
+	then
+		food_serve`s fat_serve becomes 5 and
+		patient`s fat becomes its fat - 27.5 .	
+		
+rule fat_8
+	if patient`s fat is greater than or equal to 27.5 and
+		patient`s fat is less than 29.5
+	then
+		food_serve`s fat_serve becomes 5.5 and
+		patient`s fat becomes its fat - 30 .
+
+rule fat_9
+	if patient`s fat is greater than or equal to 29.5 and
+		patient`s fat is less than 32.5
+	then
+		food_serve`s fat_serve becomes 6 and
+		patient`s fat becomes its fat - 32.5 .		
+		
+rule fat_10
+	if patient`s fat is greater than or equal to 32.5 and
+		patient`s fat is less than 34.5
+	then
+		food_serve`s fat_serve becomes 6.5 and
+		patient`s fat becomes its fat - 35 .		
+		
+rule fat_11
+	if patient`s fat is greater than or equal to 34.5 and
+		patient`s fat is less than 37.5
+	then
+		food_serve`s fat_serve becomes 7 and
+		patient`s fat becomes its fat - 37.5 .		
+		
+rule fat_12
+	if patient`s fat is greater than or equal to 37.5 and
+		patient`s fat is less than 39.5
+	then
+		food_serve`s fat_serve becomes 7.5 and
+		patient`s fat becomes its fat - 40 .	
+
+
+% Milk
+
+rule  milk_meal_serve_1
+	if food_serve`s milk_serve is equal to 1
+	then meal_serve`s break_milk_exc becomes 1.
+
+%rules for fruit
+
+rule fruit_meal_serve_1
+	if food_serve`s fruit_serve is equal to 3
+	then
+		meal_serve`s break_fruit_exc becomes 0.5 and
+		meal_serve`s lunch_fruit_exc becomes 1 and
+		meal_serve`s dinner_fruit_exc becomes 1 and
+		meal_serve`s am_snack_fruit_exc becomes 0.25 and
+		meal_serve`s pm_snack_fruit_exc becomes 0.25.
+
+rule fruit_meal_serve_2
+	if food_serve`s fruit_serve is equal to 3.5
+	then
+		meal_serve`s break_fruit_exc becomes 1 and
+		meal_serve`s lunch_fruit_exc becomes 1 and
+		meal_serve`s dinner_fruit_exc becomes 1 and
+		meal_serve`s am_snack_fruit_exc becomes 0.25 and
+		meal_serve`s pm_snack_fruit_exc becomes 0.25.
+
+rule fruit_meal_serve_3
+	if food_serve`s fruit_serve is equal to 4
+	then
+		meal_serve`s break_fruit_exc becomes 1 and
+		meal_serve`s lunch_fruit_exc becomes 1 and
+		meal_serve`s dinner_fruit_exc becomes 1 and
+		meal_serve`s am_snack_fruit_exc becomes 0.50 and
+		meal_serve`s pm_snack_fruit_exc becomes 0.50.
+
+rule fruit_meal_serve_4
+	if food_serve`s fruit_serve is equal to 4.5
+	then
+		meal_serve`s break_fruit_exc becomes 1 and
+		meal_serve`s lunch_fruit_exc becomes 1 and
+		meal_serve`s dinner_fruit_exc becomes 1 and
+		meal_serve`s am_snack_fruit_exc becomes 0.50 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_5
+	if food_serve`s fruit_serve is equal to 5
+	then
+		meal_serve`s break_fruit_exc becomes 1 and
+		meal_serve`s lunch_fruit_exc becomes 1 and
+		meal_serve`s dinner_fruit_exc becomes 1 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_6
+	if food_serve`s fruit_serve is equal to 5.5
+	then
+		meal_serve`s break_fruit_exc becomes 1 and
+		meal_serve`s lunch_fruit_exc becomes 1 and
+		meal_serve`s dinner_fruit_exc becomes 1.5 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_7
+	if food_serve`s fruit_serve is equal to 6
+	then
+		meal_serve`s break_fruit_exc becomes 1 and
+		meal_serve`s lunch_fruit_exc becomes 1 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_8
+	if food_serve`s fruit_serve is equal to 6.5
+	then
+		meal_serve`s break_fruit_exc becomes 1 and
+		meal_serve`s lunch_fruit_exc becomes 1.5 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_9
+	if food_serve`s fruit_serve is equal to 7
+	then
+		meal_serve`s break_fruit_exc becomes 1.5 and
+		meal_serve`s lunch_fruit_exc becomes 1.5 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_10
+	if food_serve`s fruit_serve is equal to 7.5
+	then
+		meal_serve`s break_fruit_exc becomes 1.5 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_11
+	if food_serve`s fruit_serve is equal to 8
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.
+
+rule fruit_meal_serve_12
+	if food_serve`s fruit_serve is equal to 8.5
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.5.
+
+rule fruit_meal_serve_13
+	if food_serve`s fruit_serve is equal to 9
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1.5 and
+		meal_serve`s pm_snack_fruit_exc becomes 1.5.
+
+rule fruit_meal_serve_14
+	if food_serve`s fruit_serve is equal to 9.5
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 1.5 and
+		meal_serve`s pm_snack_fruit_exc becomes 2.
+
+rule fruit_meal_serve_15
+	if food_serve`s fruit_serve is equal to 10
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 2 and
+		meal_serve`s am_snack_fruit_exc becomes 2 and
+		meal_serve`s pm_snack_fruit_exc becomes 2.
+
+rule fruit_meal_serve_16
+	if food_serve`s fruit_serve is equal to 10.5
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 2.5 and
+		meal_serve`s am_snack_fruit_exc becomes 2 and
+		meal_serve`s pm_snack_fruit_exc becomes 2.
+
+rule fruit_meal_serve_17
+	if food_serve`s fruit_serve is equal to 11
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2 and
+		meal_serve`s dinner_fruit_exc becomes 3 and
+		meal_serve`s am_snack_fruit_exc becomes 2 and
+		meal_serve`s pm_snack_fruit_exc becomes 2.
+
+rule fruit_meal_serve_18
+	if food_serve`s fruit_serve is equal to 11.5
+	then
+		meal_serve`s break_fruit_exc becomes 2 and
+		meal_serve`s lunch_fruit_exc becomes 2.5 and
+		meal_serve`s dinner_fruit_exc becomes 3 and
+		meal_serve`s am_snack_fruit_exc becomes 2 and
+		meal_serve`s pm_snack_fruit_exc becomes 2.
+
+rule fruit_meal_serve_19
+	if food_serve`s fruit_serve is equal to 12
+	then
+		meal_serve`s break_fruit_exc becomes 2.5 and
+		meal_serve`s lunch_fruit_exc becomes 2.5 and
+		meal_serve`s dinner_fruit_exc becomes 3 and
+		meal_serve`s am_snack_fruit_exc becomes 2 and
+		meal_serve`s pm_snack_fruit_exc becomes 2.
+
+%rules for starch
+
+rule starch_meal_serve_1
+	if food_serve`s starch_serve is equal to 4
+	then 
+		meal_serve`s break_rice_exc becomes 1 and
+		meal_serve`s lunch_rice_exc becomes 1 and
+		meal_serve`s dinner_rice_exc becomes 1 and
+		meal_serve`s am_snack_rice_exc becomes 0.5 and
+		meal_serve`s pm_snack_rice_exc becomes 0.5.
+
+rule starch_meal_serve_2
+	if food_serve`s starch_serve is equal to 4.5
+	then 
+		meal_serve`s break_rice_exc becomes 1 and
+		meal_serve`s lunch_rice_exc becomes 1 and
+		meal_serve`s dinner_rice_exc becomes 1 and
+		meal_serve`s am_snack_rice_exc becomes 0.75 and
+		meal_serve`s pm_snack_rice_exc becomes 0.75. 
+
+rule starch_meal_serve_3
+	if food_serve`s starch_serve is equal to 5
+	then 
+		meal_serve`s break_rice_exc becomes 1 and
+		meal_serve`s lunch_rice_exc becomes 1 and
+		meal_serve`s dinner_rice_exc becomes 1 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.
+
+rule starch_meal_serve_4
+	if food_serve`s starch_serve is equal to 5.5
+	then 
+		meal_serve`s break_rice_exc becomes 1 and
+		meal_serve`s lunch_rice_exc becomes 1 and
+		meal_serve`s dinner_rice_exc becomes 1.5 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.
+
+rule starch_meal_serve_5
+	if food_serve`s starch_serve is equal to 6
+	then 
+		meal_serve`s break_rice_exc becomes 1 and
+		meal_serve`s lunch_rice_exc becomes 1 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.
+
+rule starch_meal_serve_6
+	if food_serve`s starch_serve is equal to 6.5
+	then 
+		meal_serve`s break_rice_exc becomes 1 and
+		meal_serve`s lunch_rice_exc becomes 1.5 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.
+
+rule starch_meal_serve_7
+	if food_serve`s starch_serve is equal to 7
+	then 
+		meal_serve`s break_rice_exc becomes 1.5 and
+		meal_serve`s lunch_rice_exc becomes 1.5 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.
+
+rule starch_meal_serve_8
+	if food_serve`s starch_serve is equal to 7.5
+	then 
+		meal_serve`s break_rice_exc becomes 1.5 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.
+
+rule starch_meal_serve_9
+	if food_serve`s starch_serve is equal to 8
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.
+
+rule starch_meal_serve_10
+	if food_serve`s starch_serve is equal to 8.5
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1 and
+		meal_serve`s pm_snack_rice_exc becomes 1.5.
+
+rule starch_meal_serve_11
+	if food_serve`s starch_serve is equal to 9
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1.5 and
+		meal_serve`s pm_snack_rice_exc becomes 1.5.
+
+rule starch_meal_serve_12
+	if food_serve`s starch_serve is equal to 9.5
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 1.5 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_13
+	if food_serve`s starch_serve is equal to 10
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 2 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_14
+	if food_serve`s starch_serve is equal to 10.5
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 2.5 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_15
+	if food_serve`s starch_serve is equal to 11
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_16
+	if food_serve`s starch_serve is equal to 11.5
+	then 
+		meal_serve`s break_rice_exc becomes 2 and
+		meal_serve`s lunch_rice_exc becomes 2.5 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_17
+	if food_serve`s starch_serve is equal to 12
+	then 
+		meal_serve`s break_rice_exc becomes 2.5 and
+		meal_serve`s lunch_rice_exc becomes 2.5 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_18
+	if food_serve`s starch_serve is equal to 12.5
+	then 
+		meal_serve`s break_rice_exc becomes 2.5 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_19
+	if food_serve`s starch_serve is equal to 13
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.
+
+rule starch_meal_serve_20
+	if food_serve`s starch_serve is equal to 13.5
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2 and
+		meal_serve`s pm_snack_rice_exc becomes 2.5.
+
+rule starch_meal_serve_21
+	if food_serve`s starch_serve is equal to 14
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2.5 and
+		meal_serve`s pm_snack_rice_exc becomes 2.5.
+
+rule starch_meal_serve_22
+	if food_serve`s starch_serve is equal to 14.5
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 2.5 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_23
+	if food_serve`s starch_serve is equal to 15
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 3 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_24
+	if food_serve`s starch_serve is equal to 15.5
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 3.5 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_25
+	if food_serve`s starch_serve is equal to 16
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3 and
+		meal_serve`s dinner_rice_exc becomes 4 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_26
+	if food_serve`s starch_serve is equal to 16.5
+	then 
+		meal_serve`s break_rice_exc becomes 3 and
+		meal_serve`s lunch_rice_exc becomes 3.5 and
+		meal_serve`s dinner_rice_exc becomes 4 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_27
+	if food_serve`s starch_serve is equal to 17
+	then 
+		meal_serve`s break_rice_exc becomes 3.5 and
+		meal_serve`s lunch_rice_exc becomes 3.5 and
+		meal_serve`s dinner_rice_exc becomes 4 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_28
+	if food_serve`s starch_serve is equal to 17.5
+	then 
+		meal_serve`s break_rice_exc becomes 3.5 and
+		meal_serve`s lunch_rice_exc becomes 4 and
+		meal_serve`s dinner_rice_exc becomes 4 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_29
+	if food_serve`s starch_serve is equal to 18
+	then 
+		meal_serve`s break_rice_exc becomes 4 and
+		meal_serve`s lunch_rice_exc becomes 4 and
+		meal_serve`s dinner_rice_exc becomes 4 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_30
+	if food_serve`s starch_serve is equal to 18.5
+	then 
+		meal_serve`s break_rice_exc becomes 4 and
+		meal_serve`s lunch_rice_exc becomes 4 and
+		meal_serve`s dinner_rice_exc becomes 4.5 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+rule starch_meal_serve_31
+	if food_serve`s starch_serve is equal to 19
+	then 
+		meal_serve`s break_rice_exc becomes 4 and
+		meal_serve`s lunch_rice_exc becomes 4 and
+		meal_serve`s dinner_rice_exc becomes 5 and
+		meal_serve`s am_snack_rice_exc becomes 3 and
+		meal_serve`s pm_snack_rice_exc becomes 3.
+
+%rules for protein
+
+rule prot_meal_serve_1
+	if food_serve`s protein_serve is equal to 2
+	then 
+		meal_serve`s break_prot_exc becomes 0.25 and
+		meal_serve`s lunch_prot_exc becomes 0.25 and
+		meal_serve`s dinner_prot_exc becomes 1 and
+		meal_serve`s am_snack_prot_exc becomes 0.25 and
+		meal_serve`s pm_snack_prot_exc becomes 0.25.
+
+rule prot_meal_serve_2
+	if food_serve`s protein_serve is equal to 2.5
+	then 
+		meal_serve`s break_prot_exc becomes 0.50 and
+		meal_serve`s lunch_prot_exc becomes 0.50 and
+		meal_serve`s dinner_prot_exc becomes 1 and
+		meal_serve`s am_snack_prot_exc becomes 0.25 and
+		meal_serve`s pm_snack_prot_exc becomes 0.25.
+
+rule prot_meal_serve_3
+	if food_serve`s protein_serve is equal to 3
+	then 
+		meal_serve`s break_prot_exc becomes 0.50 and
+		meal_serve`s lunch_prot_exc becomes 0.50 and
+		meal_serve`s dinner_prot_exc becomes 1 and
+		meal_serve`s am_snack_prot_exc becomes 0.50 and
+		meal_serve`s pm_snack_prot_exc becomes 0.50.
+
+rule prot_meal_serve_4
+	if food_serve`s protein_serve is equal to 3.5
+	then 
+		meal_serve`s break_prot_exc becomes 0.50 and
+		meal_serve`s lunch_prot_exc becomes 1 and
+		meal_serve`s dinner_prot_exc becomes 1 and
+		meal_serve`s am_snack_prot_exc becomes 0.50 and
+		meal_serve`s pm_snack_prot_exc becomes 0.50.
+
+rule prot_meal_serve_5
+	if food_serve`s protein_serve is equal to 4
+	then 
+		meal_serve`s break_prot_exc becomes 1 and
+		meal_serve`s lunch_prot_exc becomes 1 and
+		meal_serve`s dinner_prot_exc becomes 1 and
+		meal_serve`s am_snack_prot_exc becomes 0.5 and
+		meal_serve`s pm_snack_prot_exc becomes 0.5.
+
+rule prot_meal_serve_6
+	if food_serve`s protein_serve is equal to 4.5
+	then 
+		meal_serve`s break_prot_exc becomes 1 and
+		meal_serve`s lunch_prot_exc becomes 1 and
+		meal_serve`s dinner_prot_exc becomes 1 and
+		meal_serve`s am_snack_prot_exc becomes 0.5 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_7
+	if food_serve`s protein_serve is equal to 5
+	then 
+		meal_serve`s break_prot_exc becomes 1 and
+		meal_serve`s lunch_prot_exc becomes 1 and
+		meal_serve`s dinner_prot_exc becomes 1 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_8
+	if food_serve`s protein_serve is equal to 5.5
+	then 
+		meal_serve`s break_prot_exc becomes 1 and
+		meal_serve`s lunch_prot_exc becomes 1 and
+		meal_serve`s dinner_prot_exc becomes 1.5 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_9
+	if food_serve`s protein_serve is equal to 6
+	then 
+		meal_serve`s break_prot_exc becomes 1 and
+		meal_serve`s lunch_prot_exc becomes 1 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_10
+	if food_serve`s protein_serve is equal to 6.5
+	then 
+		meal_serve`s break_prot_exc becomes 1 and
+		meal_serve`s lunch_prot_exc becomes 1.5 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_11
+	if food_serve`s protein_serve is equal to 7
+	then 
+		meal_serve`s break_prot_exc becomes 1.5 and
+		meal_serve`s lunch_prot_exc becomes 1.5 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_12
+	if food_serve`s protein_serve is equal to 7.5
+	then 
+		meal_serve`s break_prot_exc becomes 1.5 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_13
+	if food_serve`s protein_serve is equal to 8
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.
+
+rule prot_meal_serve_14
+	if food_serve`s protein_serve is equal to 8.5
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1 and
+		meal_serve`s pm_snack_prot_exc becomes 1.5.
+
+rule prot_meal_serve_15
+	if food_serve`s protein_serve is equal to 9
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1.5 and
+		meal_serve`s pm_snack_prot_exc becomes 1.5.
+
+rule prot_meal_serve_16
+	if food_serve`s protein_serve is equal to 9.5
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 1.5 and
+		meal_serve`s pm_snack_prot_exc becomes 2.
+
+rule prot_meal_serve_17
+	if food_serve`s protein_serve is equal to 10
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 2 and
+		meal_serve`s am_snack_prot_exc becomes 2 and
+		meal_serve`s pm_snack_prot_exc becomes 2.
+
+rule prot_meal_serve_18
+	if food_serve`s protein_serve is equal to 10.5
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 2.5 and
+		meal_serve`s am_snack_prot_exc becomes 2 and
+		meal_serve`s pm_snack_prot_exc becomes 2.
+
+rule prot_meal_serve_19
+	if food_serve`s protein_serve is equal to 11
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2 and
+		meal_serve`s dinner_prot_exc becomes 3 and
+		meal_serve`s am_snack_prot_exc becomes 2 and
+		meal_serve`s pm_snack_prot_exc becomes 2.
+
+rule prot_meal_serve_20
+	if food_serve`s protein_serve is equal to 11.5
+	then 
+		meal_serve`s break_prot_exc becomes 2 and
+		meal_serve`s lunch_prot_exc becomes 2.5 and
+		meal_serve`s dinner_prot_exc becomes 3 and
+		meal_serve`s am_snack_prot_exc becomes 2 and
+		meal_serve`s pm_snack_prot_exc becomes 2.
+
+rule prot_meal_serve_21
+	if food_serve`s protein_serve is equal to 12
+	then 
+		meal_serve`s break_prot_exc becomes 2.5 and
+		meal_serve`s lunch_prot_exc becomes 2.5 and
+		meal_serve`s dinner_prot_exc becomes 3 and
+		meal_serve`s am_snack_prot_exc becomes 2 and
+		meal_serve`s pm_snack_prot_exc becomes 2.
+
+%rules for vegetables
+
+rule veg_meal_serve_1
+	if food_serve`s veg_serve is equal to 3
+	then 
+		meal_serve`s lunch_veg_exc becomes 1.5 and
+		meal_serve`s dinner_veg_exc becomes 1.5.
+
+rule veg_meal_serve_2
+	if food_serve`s veg_serve is equal to 3.5
+	then 
+		meal_serve`s lunch_veg_exc becomes 1.5 and
+		meal_serve`s dinner_veg_exc becomes 2.
+
+rule veg_meal_serve_3
+	if food_serve`s veg_serve is equal to 4
+	then 
+		meal_serve`s lunch_veg_exc becomes 2 and
+		meal_serve`s dinner_veg_exc becomes 2.
+
+rule veg_meal_serve_4
+	if food_serve`s veg_serve is equal to 4.5
+	then 
+		meal_serve`s lunch_veg_exc becomes 2 and
+		meal_serve`s dinner_veg_exc becomes 2.5.
+
+rule veg_meal_serve_5
+	if food_serve`s veg_serve is equal to 5
+	then 
+		meal_serve`s lunch_veg_exc becomes 2.5 and
+		meal_serve`s dinner_veg_exc becomes 2.5.
+
+rule veg_meal_serve_6
+	if food_serve`s veg_serve is equal to 5.5
+	then 
+		meal_serve`s lunch_veg_exc becomes 2.5 and
+		meal_serve`s dinner_veg_exc becomes 3.
+
+rule veg_meal_serve_7
+	if food_serve`s veg_serve is equal to 6
+	then 
+		meal_serve`s lunch_veg_exc becomes 3 and
+		meal_serve`s dinner_veg_exc becomes 3.
+
+rule veg_meal_serve_8
+	if food_serve`s veg_serve is equal to 6.5
+	then 
+		meal_serve`s lunch_veg_exc becomes 3 and
+		meal_serve`s dinner_veg_exc becomes 3.5.
+
+rule veg_meal_serve_9
+	if food_serve`s veg_serve is equal to 7
+	then 
+		meal_serve`s lunch_veg_exc becomes 3.5 and
+		meal_serve`s dinner_veg_exc becomes 3.5.
+
+rule veg_meal_serve_10
+	if food_serve`s veg_serve is equal to 7.5
+	then 
+		meal_serve`s lunch_veg_exc becomes 3.5 and
+		meal_serve`s dinner_veg_exc becomes 4.
+
+rule veg_meal_serve_11
+	if food_serve`s veg_serve is equal to 8
+	then 
+		meal_serve`s lunch_veg_exc becomes 4 and
+		meal_serve`s dinner_veg_exc becomes 4.
+
+rule veg_meal_serve_12
+	if food_serve`s veg_serve is equal to 8.5
+	then 
+		meal_serve`s lunch_veg_exc becomes 4 and
+		meal_serve`s dinner_veg_exc becomes 4.5.
+%group rules
+
+group value 
+	value_1, value_2, value_3, value_4, value_5, value_6.
+
+group bmi
+	check_bmi1,check_bmi2, check_bmi3, check_bmi4.
+
+group starch
+	starch_1, starch_2, starch_3, starch_4, starch_5, starch_6, starch_7, starch_8, starch_9, starch_10, starch_11, starch_12, starch_13, starch_14, starch_15, starch_16, starch_17, starch_18, starch_19, starch_20, starch_21, starch_22, starch_23, starch_24, starch_25, starch_26, starch_27, starch_28, starch_29, starch_30, starch_31, starch_32.
+
+group protein
+	protein_1, protein_2, protein_3, protein_4, protein_5, protein_6, protein_7, protein_8, protein_9, protein_10, protein_11, protein_12, protein_13, protein_14, protein_15, protein_16, protein_17, protein_18, protein_19, protein_20, protein_21.
+
+group fruit
+	fruit_1,fruit_2,fruit_3,fruit_4,fruit_5,fruit_6,fruit_7,fruit_8,fruit_9,fruit_10,fruit_11,fruit_12,fruit_13,fruit_14,fruit_15,fruit_16,fruit_17,fruit_18,fruit_19.
+
+group vegetable
+	veg_1, veg_2, veg_3, veg_4, veg_5, veg_6, veg_7, veg_8, veg_9, veg_10, veg_11, veg_12 .
+
+group fat_rules
+	fat_1, fat_2, fat_3, fat_4, fat_5, fat_6, fat_7, fat_8, fat_9, fat_10, fat_11, fat_12.
+
+group meal_milk
+	milk_meal_serve_1.
+
+group meal_starch
+	starch_meal_serve_1, starch_meal_serve_2, starch_meal_serve_3, starch_meal_serve_4, starch_meal_serve_5,starch_meal_serve_6, starch_meal_serve_7, starch_meal_serve_8, starch_meal_serve_9, starch_meal_serve_10,starch_meal_serve_11, starch_meal_serve_12, starch_meal_serve_13, starch_meal_serve_14, starch_meal_serve_15,starch_meal_serve_16, starch_meal_serve_17, starch_meal_serve_18, starch_meal_serve_19, starch_meal_serve_20,starch_meal_serve_21, starch_meal_serve_22, starch_meal_serve_23, starch_meal_serve_24, starch_meal_serve_25,starch_meal_serve_26, starch_meal_serve_27, starch_meal_serve_28, starch_meal_serve_29, starch_meal_serve_30, starch_meal_serve_31.
+
+group meal_protein
+	prot_meal_serve_1, prot_meal_serve_2, prot_meal_serve_3, prot_meal_serve_4,prot_meal_serve_5,prot_meal_serve_6, prot_meal_serve_7, prot_meal_serve_8, prot_meal_serve_9, prot_meal_serve_10,prot_meal_serve_11, prot_meal_serve_12, prot_meal_serve_13, prot_meal_serve_14,prot_meal_serve_15,prot_meal_serve_16, prot_meal_serve_17, prot_meal_serve_18, prot_meal_serve_19, prot_meal_serve_20, prot_meal_serve_21.
+
+group meal_fruit
+	fruit_meal_serve_1, fruit_meal_serve_2, fruit_meal_serve_3, fruit_meal_serve_4, fruit_meal_serve_5,fruit_meal_serve_6, fruit_meal_serve_7,fruit_meal_serve_8, fruit_meal_serve_9, fruit_meal_serve_10, fruit_meal_serve_11, fruit_meal_serve_12,fruit_meal_serve_13, fruit_meal_serve_14, fruit_meal_serve_15, fruit_meal_serve_16, fruit_meal_serve_17,fruit_meal_serve_18, fruit_meal_serve_19.
+
+group meal_vegetables
+	veg_meal_serve_1, veg_meal_serve_2, veg_meal_serve_3, veg_meal_serve_4,veg_meal_serve_5, veg_meal_serve_6, veg_meal_serve_7, veg_meal_serve_8,veg_meal_serve_9, veg_meal_serve_10, veg_meal_serve_11, veg_meal_serve_12.
+
+ruleset food_starch
+	contains starch;
+	select rule	 using first come first served;
+	update ruleset by removing each selected rule.
+
+ruleset food_milk
+	contains milk;
+	update ruleset by removing each selected rule.
+
+ruleset food_protein
+	contains protein;
+	update ruleset by removing each selected rule.
+
+ruleset food_fruit
+	contains fruit;
+	update ruleset by removing each selected rule.
+
+ruleset food_vegetable
+	contains vegetable;
+	update ruleset by removing each selected rule.
+
+ruleset food_fat
+	contains fat_rules;
+	update ruleset by removing each selected rule.
+
+ruleset check_bmi_value
+	contains value, bmi;
+	update ruleset by removing each selected rule.
+
+ruleset meal_serves
+	contains meal_milk, meal_starch, meal_protein, meal_fruit, meal_vegetables;
+	update ruleset by removing each selected rule.
+
+action v3run;
+	do restart and style and
+	ask_questions and
+	determine_bmi
+	and invoke ruleset check_bmi_value and
+	if patient`s bmi_eval is obese
+		then obese_message
+		else
+			if meals_choices includes 'Pamahaw' and allergies includes 'Lactose Intolerant'
+				then ask_breakfast_hello  
+				else ask_breakfast
+			end if and 
+			if meals_choices includes 'Snacks' 
+				then ask_amsnack 
+				else write(' ') 
+			end if and 
+			if meals_choices includes 'Paniudto'
+				then ask_lunch 
+				else write(' ')
+			end if and 
+			if meals_choices includes 'Snacks' 
+				then ask_pmsnack 
+				else write(' ') 
+			end if and 
+			if meals_choices includes 'Panihapon'
+				then ask_dinner 
+				else write(' ')
+			end if and
+			determine_ter and	
+			distribute_ter and
+			invoke ruleset food_fruit and
+			invoke ruleset food_milk and
+			invoke ruleset food_starch and
+			invoke ruleset food_protein and
+			invoke ruleset food_vegetable and
+			invoke ruleset food_fat and
+			invoke ruleset meal_serves and
+			patient_information and
+			print_information and
+			print_meal_exchanges and
+			if meals_choices includes 'Pamahaw'
+				then print_meal_plan_breakfast
+				else write(' ')
+			end if and 
+			if meals_choices includes 'Snacks' 
+				then print_meal_plan_am_snack
+				else write(' ') 
+			end if and 
+			if meals_choices includes 'Paniudto'
+				then print_meal_plan_lunch 
+				else write(' ')
+			end if and 
+			if meals_choices includes 'Snacks' 
+				then print_meal_plan_pm_snack 
+				else write(' ') 
+			end if and 
+			if meals_choices includes 'Panihapon'
+				then print_meal_plan_dinner 
+				else write(' ')
+			end if and 
+			print_meal_plan_oil
+	end if.
+	
+action determine_bmi;
+	check that X = bmi(height_m(height_in(height, height2)), weight) and
+	the patient`s bmi_value becomes X.	
+
+action ask_questions;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+				input[type=checkbox]{		
+					margin: 5px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 34px;
+					  padding: 3px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 18px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+					margin-top: 5px;
+					font-size: 16px;
+					margin-bottom:0px;
+					padding-top: 8px;
+				}
+				.wfsquestion {
+    				width: 220px;
+				}
+				input.wfsbrowse{
+					margin-top:-20px;
+				}
+
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center" >')  and
+	write('<tr>') and
+	write('<th>MGA KASAGARA NGA IMPORMASYON</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and 
+	ask info and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+
+action obese_message;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 70px;
+					background-color: #f4f5f7;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}
+				td < a:hover {background-color: #2a8c49;}	
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<div class="col-sm-12 col-md-12">') and
+  	write('<table align="center">') and
+	write('<tr>') and
+	write('<th><p style="font-size:20px;">Oppss!</p></th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center" style="padding-left:5%; padding-right:5%; padding-top:2%;">') and 
+	write('<p style="font-size:18px;">Base sa kasayuran nga imong gihatag, ikaw gi-classified nga<b><span style="color:red;">OBESE</span></b>, ug kini nga sistema dili makahatag kanimo sa angay nga plano sa pagkaon. Ikaw gitambagan nga kinahanglan nga konsultahon nimo ang imong doktor.</p>') and
+	write('</td>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and
+	write('<img src="/thesis/diaplan_v2/images/SAD FACE.png" style="height:300px; width:auto;">') and write('</td>') and
+	write('</tr>') and 
+	write('<tr>') and
+	write('<td align="center">') and
+	write('<a class="btn btn-lg" style="background:#fc4f4f; color:white;" href="/thesis/diaplan_v2/page.html">Proceed</a>') and write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>') .
+
+action meals_choices;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 50px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 250px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 16px;
+					background-color: #FC4F4F;
+					color: white;
+					margin-bottom: 50px;
+				}
+				td {
+
+					font-size: 14px;
+					margin-bottom:0px;
+				}
+  			</style>') and
+  	write('<table align="center">')  and
+	write('<tr>') and
+	write('<th><p align="center">Choose the meals you want to generate</p></th>') and
+	write('<th style="background-color:#ddd;">') and ask meals_choices
+	and write('</th>') and
+	write('</tr>') and
+	write('<tr>') and write('</tr>') and
+	write('</table>').
+
+action ask_breakfast;
+	do write('
+			<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 80px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 300px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+					  padding-top: 15px;
+					  padding-bottom: 15px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 18px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+					margin-top: 5px;
+					font-size: 16px;
+					margin-bottom:0px;
+					padding-top: 8px;
+				}
+  			</style>') and
+  	write('<div align="center" class="col-sm-12 col-md-12">') and
+  	write('<table align="center">')  and
+	write('<tr>') and
+	write('<th>PAMAHAW</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and
+	ask breakfast and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+
+action ask_breakfast_hello;
+	do write('
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 80px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 300px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+					  padding-top: 15px;
+					  padding-bottom: 15px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 18px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+					margin-top: 5px;
+					font-size: 16px;
+					margin-bottom:0px;
+					padding-top: 8px;
+				}
+  			</style>') and
+  	write('<div align="center" class="col-sm-12 col-md-12">') and
+  	write('<table align="center">')  and
+	write('<tr>') and
+	write('<th>Pamahaw</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and
+	ask breakfast_hello and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+
+action ask_amsnack;
+	do write('<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 145px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 300px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+					  padding-top: 10px;
+					  padding-bottom: 15px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 18px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+					margin-top: 5px;
+					font-size: 16px;
+					margin-bottom:0px;
+					padding-top: 10px;
+				}
+  			</style>') and
+  	write('<div align="center" class="col-sm-12 col-md-12">') and		
+  	write('<table align="center">')  and
+	write('<tr>') and
+	write('<th>Buntag nga Snack</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and
+	ask amsnack and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+
+action ask_lunch;
+	do write('<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 80px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 300px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+					  padding-top: 15px;
+					  padding-bottom: 15px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 18px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+					margin-top: 5px;
+					font-size: 16px;
+					margin-bottom:0px;
+					padding-top: 8px;
+				}
+  			</style>') and
+  	write('<div align="center" class="col-sm-12 col-md-12">') and
+  	write('<table align="center">')  and
+	write('<tr>') and
+	write('<th>PANIUDTO</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and
+	ask lunch and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+
+action ask_pmsnack;
+	do write('<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 145px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 300px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+					  padding-top: 10px;
+					  padding-bottom: 15px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 18px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+					margin-top: 5px;
+					font-size: 16px;
+					margin-bottom:0px;
+					padding-top: 10px;
+				}
+  			</style>') and
+  	write('<div align="center" class="col-sm-12 col-md-12">') and
+  	write('<table align="center">')  and
+	write('<tr>') and
+	write('<th>Hapon nga Snack</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and
+	ask pmsnack and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').
+	
+action ask_dinner;
+	do write('<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					border-collapse: collapse;
+					width: 50%;
+					height: 80px;
+					background-color: #f4f5f7;
+				}
+				input[type=submit] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 12px;
+					margin-top:0px;
+				}
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+				input[type=submit]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				input[type=text], select {
+					  font-size: 13px;
+					  width: 100%;
+					  height: 27px;
+					  margin-right: 300px;
+					  display: inline-block;
+					  border: 1px solid #ccc;
+					  border-radius: 1px;
+					  box-sizing: border-box;
+					  margin-bottom:0px;
+					  margin-top:0px;
+					  padding-top: 15px;
+					  padding-bottom: 15px;
+				}
+				td, th {
+				  border: 1px solid #f4f5f7;
+				  padding: 1px;
+				}	
+				tr:hover {background-color: #f4f5f7;}
+				th {
+					padding-left: 50px;
+					text-align: left;
+					padding-top: 15px;
+					font-size: 18px;
+					background-color: #FC4F4F;
+					color: white;
+					padding-bottom: 15px;
+				}
+				td {
+					margin-top: 5px;
+					font-size: 16px;
+					margin-bottom:0px;
+					padding-top: 8px;
+				}
+  			</style>') and
+  	write('<div align="center" class="col-sm-12 col-md-12">') and
+  	write('<table align="center">')  and
+	write('<tr>') and
+	write('<th>PANIHAPON</th>') and
+	write('</tr>') and
+	write('<tr>') and
+	write('<td align="center">') and
+	ask dinner and 
+	write('</td>') and
+	write('</tr>') and
+	write('</table>') and write('</div>').	
+
+action determine_ter;
+	do check that K = height_in(height, height2) and
+	if gender is 'Lalaki' and K is greater than or equal to 60
+		then check that O = ideal_weight_m(height_in(height, height2)) and
+			patient`s dbw becomes O
+		else check that L = ideal_weight_f(height_in(height, height2)) and 
+			patient`s dbw becomes L 
+	end if and 
+	if gender is 'Lalaki' and K is less than 60 
+		then check that O = ideal_weight_ms(height_in(height, height2)) and
+			patient`s dbw becomes O
+		else write('')
+	end if and 
+	if gender is 'Babaye' and K is less than 60 
+		then check that O = ideal_weight_fs(height_in(height, height2)) and
+			patient`s dbw becomes O
+		else write('')
+	end if and 
+	if bodyframe is 'Gamay na Frame'
+	then patient`s dbw becomes its dbw - (patient`s dbw * 0.1)
+	else write('')
+	end if and
+	if bodyframe is 'Dako na Frame'
+	then patient`s dbw becomes its dbw + (patient`s dbw * 0.1)
+	else write('')
+	end if and
+	check that Y = compute_ter( patient`s dbw * 0.453592 ,patient`s value) and
+	patient`s ter becomes Y.
+
+action distribute_ter;
+	the patient`s cho becomes (patient`s ter * 0.6)/4 and
+	the patient`s pro becomes (patient`s ter * 0.15)/4 and
+	the patient`s fat becomes (patient`s ter * 0.25)/9.
+
+action style;
+	do write('<style>input[type=text] {
+			  width: 100%;
+			  margin: 8px 0;
+			  box-sizing: border-box;
+		}
+		select {
+			 width: 100%;
+			  margin: 8px 0;
+			  box-sizing: border-box;
+		}
+		</style>').
+
+action patient_information;
+	the patient`s myname becomes name and
+	the patient`s height_ft becomes height and
+	the patient`s height_in becomes height2 and
+	the patient`s weight becomes weight and
+	the patient`s mygender becomes gender and
+	the patient`s myactivity becomes activity and
+	the patient`s body_frame becomes bodyframe.
+
+action print_information;
+	do write('<link rel="stylesheet" href="/thesis/diaplan_v2/css/bootstrap-4-3.css">
+			<style>
+				table {
+					font-family: arial, sans-serif;
+					border-collapse: collapse;
+					width: 30%;
+					color: black;
+					background-color: #f4f5f7;
+				}
+
+				input[type=button] {
+					font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+					background-color:#FC4F4F;
+					color: white;
+					border-radius: 4px;
+					font-size: 10px;
+					padding:2px;
+					margin-top:0px;
+				}
+				input[type=button]:hover {
+				  	background-color: #2a8c49;
+				  	color: white;
+				}
+				td, th {
+					border: 1px solid #dddddd;
+					text-align: left;
+					margin-right: 100px;
+					padding: 8px;
+					font-color: black;
+				}
+
+				td {
+					width: 30%;
+					font-size: 13px;
+				}
+
+				th {
+					font-size: 15px;
+				}
+				.tool-tip {
+				  display: inline-block;
+				  position: relative;
+				  margin-left: 0.5em;
+				}
+				.tool-tip .tool-tip__icon {
+				  background: #27b1f0;
+				  border-radius: 10px;
+				  cursor: pointer;
+				  display: inline-block;
+				  font-style: italic;
+				  font-family: times new roman;
+				  height: 20px;
+				  line-height: 1.3em;
+				  text-align: center;
+				  width: 20px;
+				}
+				.tool-tip .tool-tip__info {
+				  display: none;
+				  background: #fffbfb;
+				  border: 1px solid #27b1f0;
+				  border-radius: 3px;
+				  font-size: 0.875em;
+				  padding: 1em;
+				  position: absolute;
+				  left: 30px;
+				  top: -20px;
+				  width: 250px;
+				  z-index: 2;
+				}
+				.tool-tip .tool-tip__info:before, .tool-tip .tool-tip__info:after {
+				  content: "";
+				  position: absolute;
+				  left: -10px;
+				  top: 7px;
+				  border-style: solid;
+				  border-width: 10px 10px 10px 0;
+				  border-color: transparent #27b1f0;
+				}
+				.tool-tip .tool-tip__info:after {
+				  left: -8px;
+				  border-right-color: #262626;
+				}
+				.tool-tip .tool-tip__info .info {
+				  display: block;
+				}
+				.tool-tip .tool-tip__info .info__title {
+				  color: #000000	;
+				}
+				.tool-tip:hover .tool-tip__info, .tool-tip:focus .tool-tip__info {
+				  display: inline-block;
+				}
+
+				a:focus + .tool-tip .tool-tip__info {
+				  display: inline-block;
+				}				
+  			</style>') and
+  		write('<input type="button" class="btn btn-lg" onclick="window.print()" style="float:right;" value="Print"/>') and
+  		write('<div align="center" class="col-sm-12 col-md-12">') and
+		write('<table>')  and
+		write('<tr>') and
+		write('<td colspan="2" style="text-align: center; background-color: #FFFFF; color:black;"><h3>Single Day Plan</h3>
+Importante nga adunay mga mosunod nga mga himan sa pagsukod sa serving sa pagkaon. I-klik kini<div class="tool-tip">
+            <i class="tool-tip__icon">?</i>
+            <p class="tool-tip__info">
+              <span class="info"><span class="info__title"> <strong style="font-size: 15px">Mga himan alang sa pagsukod sa pagkaon</strong> </span></span>
+              <span><span class="info__title"><img src="/thesis/diaplan_v2/images/measuring_cup.jpg" height="100px" width="100px"></span>
+			  <span><span class="info__title"><img src="/thesis/diaplan_v2/images/measuring_tools.jpg" height="100px" width="100px"></span></span>
+			  <span><span class="info__title"></span></span>
+            </p>
+          </div> <br> Kung ikaw adunay weighing scale, mahimo nimo ang pagsukod sa imong pagkaon nga gipasikad sa seksyon sa Wt. (g).') and
+		write('</tr>') and
+		write('<tr>') and
+		write('<th colspan="2" style="text-align: center; background-color: #FC4F4F; color:white;">') and write('<h4>Si <b>') and write(patient`s myname) and write('</b> kay usa ka ') and write(patient`s myactivity) and write(' nga ') and write(patient`s mygender) and write(' nga adunay gitas-on nga <b>') and write(patient`s height_ft) and write(' ft and ') and write( patient`s height_in) and write(' inch</b>, og gibug-aton nga <b>') and write(patient`s weight) and write(' kg</b> og bmi evaluation nga <b>') and write('<span style="text-transform:capitalize;">') and write(patient`s bmi_eval) and write('</span></b> og adunay <b>') and write( patient`s body_frame) and write('</b>. Ang kinatibuk-ang gikinahanglan nga kaloriya mao <b>') and write(patient`s ter) and write(' kaloriya </b> ug ang namugna nga plano sa pagkaon adunay usa ka <b>') and write(ter_serve(food_serve`s milk_serve, food_serve`s starch_serve, food_serve`s protein_serve, food_serve`s veg_serve, food_serve`s fruit_serve, food_serve`s fat_serve)) and write(' kaloriya </b>.</h4></th>') and
+		write('</tr>') and
+		write('</table>') and write('</div>').
+		
+action print_meal_exchanges;
+	do 	write('<style>
+				table {
+					font-family: arial, sans-serif;
+					border-collapse: collapse;
+					width: 60%;
+					color: black;
+					background-color: #f4f5f7;
+				}
+
+				td, th {
+					border: 1px solid #dddddd;
+					text-align: left;
+					padding: 8px;
+					font-color: black;
+				}
+
+				td {
+					font-size: 13px;
+					width: 10%;
+				}
+
+				th {
+					font-size: 15px;
+				}
+  			</style>') and 
+  		write('<br><div align="center" class="col-sm-12 col-md-12">')and
+  		write('<table>')  and
+		write('<tr>') and
+		write('<th colspan="7 " style="text-align: center; background-color: #FC4F4F; color:white;">MEAL EXCHANGES</th>') and
+		write('</tr>') and
+		write('<tr>') and
+		write('<td><b>Gatas</b></td>') and
+		write('<td><b>Starch</b></td>') and
+		write('<td><b>Protein</b></td>') and
+		write('<td><b>Utanon</b></td>') and
+		write('<td><b>Prutas</b></td>') and
+		write('<td><b>Fats</b></td>') and
+		write('</tr>') and 
+		write('<tr>') and
+		write('<td>') and write(food_serve`s milk_serve) and write('</td>') and
+		write('<td>') and write(food_serve`s starch_serve) and write('</td>') and
+		write('<td>') and write(food_serve`s protein_serve) and write('</td>') and
+		write('<td>') and write(food_serve`s veg_serve) and write('</td>') and
+		write('<td>') and write(food_serve`s fruit_serve) and write('</td>') and
+		write('<td>') and write(food_serve`s fat_serve) and write('</td>') and
+		write('</tr>') and
+		write('</table>') and write('</div>').		
+		
+action print_meal_plan_breakfast;
+	do for every M is some instance of meal_serve
+		do 
+		write('<style>
+				#table {
+					font-family: arial, sans-serif;
+					border-collapse: collapse;
+					width: 60%;
+					color: black;
+					background-color: #f4f5f7;
+				}
+
+				#table td, th {
+					border: 1px solid #dddddd;
+					text-align: left;
+					padding: 8px;
+					font-color: black;
+				}
+
+				#table td {
+					font-size: 13px;
+				}
+
+				#table th {
+					font-size: 15px;
+					background-color: #FC4F4F;
+					color:white;
+				}
+				.tool-tip {
+				  display: inline-block;
+				  position: relative;
+				  margin-left: 0.5em;
+				}
+				.tool-tip .tool-tip__icon {
+				  background: #27b1f0;
+				  border-radius: 10px;
+				  cursor: pointer;
+				  display: inline-block;
+				  font-style: italic;
+				  font-family: times new roman;
+				  height: 20px;
+				  line-height: 1.3em;
+				  text-align: center;
+				  width: 20px;
+				}
+				.tool-tip .tool-tip__info {
+				  display: none;
+				  background: #FFFFF;
+				  border: 1px solid #27b1f0;
+				  border-radius: 3px;
+				  font-size: 0.875em;
+				  padding: 1em;
+				  position: absolute;
+				  left: 30px;
+				  top: -20px;
+				  width: 250px;
+				  z-index: 2;
+				}
+				.tool-tip .tool-tip__info:before, .tool-tip .tool-tip__info:after {
+				  content: "";
+				  position: absolute;
+				  left: -10px;
+				  top: 7px;
+				  border-style: solid;
+				  border-width: 10px 10px 10px 0;
+				  border-color: transparent #27b1f0;
+				}
+				.tool-tip .tool-tip__info:after {
+				  left: -8px;
+				  border-right-color: #262626;
+				}
+				.tool-tip .tool-tip__info .info {
+				  display: block;
+				}
+				.tool-tip .tool-tip__info .info__title {
+				  color: #000000	;
+				}
+				.tool-tip:hover .tool-tip__info, .tool-tip:focus .tool-tip__info {
+				  display: inline-block;
+				}
+
+				a:focus + .tool-tip .tool-tip__info {
+				  display: inline-block;
+				}				
+  			</style>') and
+		write('<div align="center" class="col-sm-12 col-md-12">') and
+		write('<table id="table">')  and
+		write('<th colspan="7 " style="text-align: center">MEAL PLAN</th>') and
+		write('<tr>') and
+		write('<td colspan="7 " style="font-size: 14px; background-color: #FC4F4F; color:white;"><b>PAMAHAW  ( ') and write(breakfast_cal(M`s break_fruit_exc, M`s break_milk_exc, M`s break_rice_exc, M`s break_prot_exc)) and write(' kaloriya)</b></td>') and
+		write('</tr>') and
+		write('<tr>') and
+		write('<td style="width:1%"><b></b></td>') and
+		write('<td style="width:22%"><b>Ngalan sa Pagkaon</b></td>') and
+		write('<td style="width:10%"><b>Panimalay nga Serving</b></td>') and
+		write('<td style="width:20%"><b>Measurement</b></td>') and
+		write('<td style="width:1%"><b>Kaloriya</b></td>') and
+		write('<td style="width:1%"><b>Exch</b></td>') and
+		write('<td style="width:1%"><b>Wt. (g)</b><div class="tool-tip">
+            <i class="tool-tip__icon">?</i>
+            <p class="tool-tip__info">
+              <span class="info"><span class="info__title"> <strong style="font-size: 15px">A.P.</strong> </span></span>
+              <span><span class="info__title">Ingon nga gipalit, ang gibug-aton nga makaon ug ang dili makaon nga bahin sa pagkaon.</span></span>
+			  <span class="info"><span class="info__title"> <strong style="font-size: 15px">E.P.</strong> </span></span>
+              <span><span class="info__title">Ang makaon nga bahin, ang gibug-aton sa pagkaon nga dili makaon nga bahin.</span></span>
+            </p>
+          </div></td>') and
+		write('</tr>') and
+		do for every F is some instance of fruit whose food_name is b_fruit
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s break_fruit_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and
+			write('<td>') and write( F`s cal * M`s break_fruit_exc) and write('</td>') and
+			write('<td>') and write( M`s break_fruit_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s break_fruit_exc) and write(' g (A.P.)') and write('</td>') and
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of protein whose food_name is b_prot
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s break_prot_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s break_prot_exc) and write('</td>') and
+			write('<td>') and write( M`s break_prot_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s break_prot_exc) and write(' g (E.P.)') and write('</td>') and
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of starch whose food_name is b_starch
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s break_rice_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s break_rice_exc) and write('</td>') and
+			write('<td>') and write( M`s break_rice_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s break_rice_exc) and write(' g (E.P.)') and write('</td>') and
+			write('</tr>') 
+			and nl end for and
+		do for every F is some instance of milk whose food_name is b_milk
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s break_milk_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s break_milk_exc) and write('</td>') and
+			write('<td>') and write( M`s break_milk_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s break_milk_exc) and write(' g (E.P.)') and write('</td>') and
+			write('</tr>')
+			and nl end for and 
+		write('</table>') and write('</div>')
+	end for.
+
+action print_meal_plan_am_snack;
+	do for every M is some instance of meal_serve
+		do 
+		write('<style>
+				#table {
+					font-family: arial, sans-serif;
+					border-collapse: collapse;
+					width: 60%;
+					color: black;
+					background-color: #f4f5f7;
+				}
+
+				#table td, th {
+					border: 1px solid #dddddd;
+					text-align: left;
+					padding: 8px;
+					font-color: black;
+				}
+
+				#table td {
+					font-size: 13px;
+				}
+
+				#table th {
+					font-size: 15px;
+					background-color: #FC4F4F;
+					color:white;
+				}
+
+
+  			</style>') and
+		write('<div align="center" class="col-sm-12 col-md-12">') and
+		write('<table id="table">')  and
+		write('<tr>') and
+		write('<td colspan="7 " style="font-size: 14px; background-color: #FC4F4F; color:white; "><b>Buntag nga Snack ( ') and write(am_snack_cal(M`s am_snack_rice_exc, M`s  am_snack_prot_exc, M`s am_snack_fruit_exc )) and write(' kaloriya)</b></td>') and
+		write('</tr>') and
+		write('<tr>') and
+		write('<td style="width:1%"><b></b></td>') and
+		write('<td style="width:22%"><b>Ngalan sa Pagkaon</b></td>') and
+		write('<td style="width:10%"><b>Panimalay nga Serving</b></td>') and
+		write('<td style="width:20%"><b>Measurement</b></td>') and
+		write('<td style="width:1%"><b>Kaloriya</b></td>') and
+		write('<td style="width:1%"><b>Exch</b></td>') and
+		write('<td style="width:1%"><b>Wt. (g)</b><div class="tool-tip">
+            <i class="tool-tip__icon">?</i>
+            <p class="tool-tip__info">
+              <span class="info"><span class="info__title"> <strong style="font-size: 15px">A.P.</strong> </span></span>
+              <span><span class="info__title">Ingon nga gipalit, ang gibug-aton nga makaon ug ang dili makaon nga bahin sa pagkaon.</span></span>
+			  <span class="info"><span class="info__title"> <strong style="font-size: 15px">E.P.</strong> </span></span>
+              <span><span class="info__title">Ang makaon nga bahin, ang gibug-aton sa pagkaon nga dili makaon nga bahin.</span></span>
+            </p>
+          </div></td>') and
+		write('</tr>') and
+		do for every F is some instance of fruit whose food_name is am_fruit
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s am_snack_fruit_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s am_snack_fruit_exc) and write('</td>') and
+			write('<td>') and write( M`s am_snack_fruit_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s am_snack_fruit_exc) and write(' g (A.P.)') and write('</td>') and
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of protein whose food_name is am_prot
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s am_snack_prot_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s am_snack_prot_exc) and write('</td>') and
+			write('<td>') and write( M`s am_snack_prot_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s am_snack_fruit_exc) and write(' g (E.P.)') and write('</td>') and			
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of starch whose food_name is am_starch
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s am_snack_rice_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s am_snack_rice_exc) and write('</td>') and
+			write('<td>') and write( M`s am_snack_rice_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s am_snack_rice_exc) and write(' g (E.P.)') and write('</td>') and			
+			write('</tr>') 
+			and nl end for and
+		write('</table>') and write('</div>')
+	end for.	
+	
+action print_meal_plan_lunch;
+	do for every M is some instance of meal_serve
+		do 
+		write('<div align="center" class="col-sm-12 col-md-12">') and
+		write('<table id="table">')  and		
+		write('<tr>') and
+		write('<td colspan="7 " style="font-size: 14px; background-color: #FC4F4F; color:white;"><b>PANIUDTO ( ') and write(lunch_cal(M`s lunch_fruit_exc, M`s lunch_veg_exc, M`s lunch_rice_exc, M`s lunch_prot_exc)) and write(' kaloriya)</b></td>') and
+		write('</tr>') and
+		write('<tr>') and
+		write('<td style="width:1%"><b></b></td>') and
+		write('<td style="width:22%"><b>Ngalan sa Pagkaon</b></td>') and
+		write('<td style="width:10%"><b>Panimalay nga Serving</b></td>') and
+		write('<td style="width:20%"><b>Measurement</b></td>') and
+		write('<td style="width:1%"><b>Kaloriya</b></td>') and
+		write('<td style="width:1%"><b>Exch</b></td>') and
+		write('<td style="width:1%"><b>Wt. (g)</b><div class="tool-tip">
+            <i class="tool-tip__icon">?</i>
+            <p class="tool-tip__info">
+              <span class="info"><span class="info__title"> <strong style="font-size: 15px">A.P.</strong> </span></span>
+              <span><span class="info__title">Ingon nga gipalit, ang gibug-aton nga makaon ug ang dili makaon nga bahin sa pagkaon.</span></span>
+			  <span class="info"><span class="info__title"> <strong style="font-size: 15px">E.P.</strong> </span></span>
+              <span><span class="info__title">Ang makaon nga bahin, ang gibug-aton sa pagkaon nga dili makaon nga bahin.</span></span>
+            </p>
+          </div></td>') and
+		write('</tr>') and
+		do for every F is some instance of fruit whose food_name is l_fruit
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s lunch_fruit_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s lunch_fruit_exc) and write('</td>') and
+			write('<td>') and write( M`s lunch_fruit_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s lunch_fruit_exc) and write(' g (A.P.)') and write('</td>') and					
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of protein whose food_name is l_prot
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s lunch_prot_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s lunch_prot_exc) and write('</td>') and
+			write('<td>') and write( M`s lunch_prot_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s lunch_prot_exc) and write(' g (E.P.)') and write('</td>') and					
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of starch whose food_name is l_starch
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s lunch_rice_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s lunch_rice_exc) and write('</td>') and
+			write('<td>') and write( M`s lunch_rice_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s lunch_rice_exc) and write(' g (E.P.)') and write('</td>') and					
+			write('</tr>') 
+			and nl end for and
+		do for every F is some instance of vegetable whose food_name is l_veg
+			do tab(8) and
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s lunch_veg_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s lunch_veg_exc) and write('</td>') and
+			write('<td>') and write( M`s lunch_veg_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s lunch_veg_exc) and write(' g (E.P.)') and write('</td>') and					
+			write('</tr>') 
+			and nl end for and
+		write('</table>') and write('</div>')
+	end for.
+
+action print_meal_plan_pm_snack;
+	do for every M is some instance of meal_serve
+		do write('<style>
+				#table {
+					font-family: arial, sans-serif;
+					border-collapse: collapse;
+					width: 60%;
+					color: black;
+				}
+
+				#table td, th {
+					border: 1px solid #dddddd;
+					text-align: left;
+					padding: 8px;
+					font-color: black;
+				}
+
+				#table td {
+					font-size: 13px;
+				}
+
+				#table th {
+					font-size: 15px;
+				}
+  			</style>') and
+		write('<div align="center" class="col-sm-12 col-md-12">') and
+		write('<table id="table">')  and
+		write('<tr>') and
+		write('<td colspan="7 " style="font-size: 14px; background-color: #FC4F4F; color:white;"><b>Hapon nga Snack ( ') and write(pm_snack_cal(M`s pm_snack_rice_exc, M`s  pm_snack_prot_exc, M`s pm_snack_fruit_exc )) and write(' kaloriya)</b></td>') and
+		write('</tr>') and
+		write('<tr>') and
+		write('<td style="width:1%"><b></b></td>') and
+		write('<td style="width:22%"><b>Ngalan sa Pagkaon</b></td>') and
+		write('<td style="width:10%"><b>Panimalay nga Serving</b></td>') and
+		write('<td style="width:20%"><b>Measurement</b></td>') and
+		write('<td style="width:1%"><b>Kaloriya</b></td>') and
+		write('<td style="width:1%"><b>Exch</b></td>') and
+		write('<td style="width:1%"><b>Wt. (g)</b><div class="tool-tip">
+            <i class="tool-tip__icon">?</i>
+            <p class="tool-tip__info">
+              <span class="info"><span class="info__title"> <strong style="font-size: 15px">A.P.</strong> </span></span>
+              <span><span class="info__title">Ingon nga gipalit, ang gibug-aton nga makaon ug ang dili makaon nga bahin sa pagkaon.</span></span>
+			  <span class="info"><span class="info__title"> <strong style="font-size: 15px">E.P.</strong> </span></span>
+              <span><span class="info__title">Ang makaon nga bahin, ang gibug-aton sa pagkaon nga dili makaon nga bahin.</span></span>
+            </p>
+          </div></td>') and
+		write('</tr>') and
+		write('<tr>') and
+		write('</tr>') and
+		do for every F is some instance of fruit whose food_name is pm_fruit
+			do tab(8) and 
+				write('<tr>') and 
+				write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+				write('<td>') and write(F`s food_name) and write('</td>') and
+				write('<td>') and write(serve(F`s serve, M`s pm_snack_fruit_exc)) and write('</td>') and
+				write('<td>') and write( F`s desc) and write('</td>') and 
+				write('<td>') and write( F`s cal *  M`s pm_snack_fruit_exc) and write('</td>') and
+				write('<td>') and write(  M`s pm_snack_fruit_exc) and write('</td>') and
+				write('<td>') and write( F`s ap *  M`s pm_snack_fruit_exc) and write(' g (A.P.)') and write('</td>') and		
+				write('</tr>')
+				and nl end for and
+		do for every F is some instance of protein whose food_name is pm_prot
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s pm_snack_prot_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s pm_snack_prot_exc) and write('</td>') and
+			write('<td>') and write( M`s pm_snack_prot_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s pm_snack_prot_exc) and write(' g (E.P.)') and write('</td>') and		
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of starch whose food_name is pm_starch
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s pm_snack_rice_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s pm_snack_rice_exc) and write('</td>') and
+			write('<td>') and write( M`s pm_snack_rice_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s pm_snack_rice_exc) and write(' g (E.P.)') and write('</td>') and		
+			write('</tr>') 
+			and nl end for and
+		write('</table>') and write('</div>')
+	end for.
+
+action print_meal_plan_dinner;
+	do for every M is some instance of meal_serve
+		do write('<style>
+				#table {
+					font-family: arial, sans-serif;
+					border-collapse: collapse;
+					width: 60%;
+					color: black;
+				}
+
+				#table td, th {
+					border: 1px solid #dddddd;
+					text-align: left;
+					padding: 8px;
+					font-color: black;
+				}
+
+				#table td {
+					font-size: 13px;
+				}
+
+				#table th {
+					font-size: 15px;
+				}
+  			</style>') and
+		write('<div align="center" class="col-sm-12 col-md-12">') and
+		write('<table id="table">')  and
+		write('<tr>') and
+		write('<td colspan="7 " style="font-size: 14px; background-color: #FC4F4F; color:white;"><b>PANIHAPON ( ') and write(dinner_cal(M`s dinner_fruit_exc, M`s dinner_veg_exc, M`s dinner_rice_exc, M`s dinner_prot_exc)) and write(' kaloriya)</b></td>') and
+		write('</tr>') and
+		write('<tr>') and
+		write('<td style="width:1%"><b></b></td>') and
+		write('<td style="width:22%"><b>Ngalan sa Pagkaon</b></td>') and
+		write('<td style="width:10%"><b>Panimalay nga Serving</b></td>') and
+		write('<td style="width:20%"><b>Measurement</b></td>') and
+		write('<td style="width:1%"><b>Kaloriya</b></td>') and
+		write('<td style="width:1%"><b>Exch</b></td>') and
+		write('<td style="width:1%"><b>Wt. (g)</b><div class="tool-tip">
+            <i class="tool-tip__icon">?</i>
+            <p class="tool-tip__info">
+              <span class="info"><span class="info__title"> <strong style="font-size: 15px">A.P.</strong> </span></span>
+              <span><span class="info__title">Ingon nga gipalit, ang gibug-aton nga makaon ug ang dili makaon nga bahin sa pagkaon.</span></span>
+			  <span class="info"><span class="info__title"> <strong style="font-size: 15px">E.P.</strong> </span></span>
+              <span><span class="info__title">Ang makaon nga bahin, ang gibug-aton sa pagkaon nga dili makaon nga bahin.</span></span>
+            </p>
+          </div></td>') and
+		write('</tr>') and
+		do for every F is some instance of fruit whose food_name is d_fruit
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s dinner_fruit_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s dinner_fruit_exc) and write('</td>') and
+			write('<td>') and write( M`s dinner_fruit_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s dinner_fruit_exc) and write(' g (A.P.)') and write('</td>') and		
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of protein whose food_name is d_prot
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s dinner_prot_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s dinner_prot_exc) and write('</td>') and
+			write('<td>') and write( M`s dinner_prot_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s dinner_prot_exc) and write(' g (E.P.)') and write('</td>') and		
+			write('</tr>')
+			and nl end for and
+		do for every F is some instance of starch whose food_name is d_starch
+			do tab(8) and 
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and	
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s dinner_rice_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s dinner_rice_exc) and write('</td>') and
+			write('<td>') and write( M`s dinner_rice_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s dinner_rice_exc) and write(' g (E.P.)') and write('</td>') and		
+			write('</tr>') 
+			and nl end for and
+		do for every F is some instance of vegetable whose food_name is d_veg
+			do tab(8) and
+			write('<tr>') and 
+			write('<td>') and write('<img src="') and write(F`s img) and write('" height="50" width="50" >') and write('</td>') and		
+			write('<td>') and write(F`s food_name) and write('</td>') and
+			write('<td>') and write(serve(F`s serve, M`s dinner_veg_exc)) and write('</td>') and
+			write('<td>') and write( F`s desc) and write('</td>') and 
+			write('<td>') and write( F`s cal * M`s dinner_veg_exc) and write('</td>') and
+			write('<td>') and write( M`s dinner_veg_exc) and write('</td>') and
+			write('<td>') and write( F`s ap * M`s dinner_veg_exc) and write(' g (E.P.)') and write('</td>') and		
+			write('</tr>') 
+			and nl end for and
+		write('</table>') and write('</div>')
+	end for.
+
+action print_meal_plan_oil;
+	do for every M is some instance of food_serve
+		do 
+		write('<div align="center" class="col-sm-12 col-md-12">') and
+		write('<table id="table">')  and		
+		write('<tr>') and
+		write('<td colspan="7 " style="font-size: 14px; background-color: #FC4F4F; color:white;"><h4 style="text-align:center" >Aduna kay <b>') and write(M`s fat_serve ) and write('</b> Fat exchange <strong>(') and write(M`s fat_serve *45)  and write(' kaloriya) </strong> nga pwede maconvert sa ') and write(M`s fat_serve) and write(' kutsara sa uwil (mais, lubi, olibo) o mantekilya. Sa pagprito sa karne, gamita ang fat nga allowance sa imong pagkaon ug usab sa utanon, ang fat mahimong gamiton alang sa pagpangandam.</h4></td>')  and
+		write('</tr>') and
+		write('</table>') and write('</div>')
+	end for.	
+
+function ter_serve(Milk, Starch, Protein, Vegetable, Fruit, Fat) = T
+	where T is (Milk * 125) + (Starch * 100) + (Protein * 86) + (Vegetable * 16) + (Fruit * 40) + (Fat * 45).
+		
+function bmi(Height, Weight) = B
+	where B is Weight/ (Height * Height).
+
+function height_in(Height_ft,Height_in) = H
+	where H is ((Height_ft * 12) + Height_in).
+
+function height_m(Height_in) = M
+	where M is (Height_in * 0.0254).
+
+function ideal_weight_f(Height_m) = I
+	where I is 100 + (Height_m - 60) * 5 .
+
+function ideal_weight_m(Height_m) = X
+	where X is 106 + (Height_m - 60) * 6 .
+
+function compute_ter(DBW, Value) = T
+	where T is (DBW * Value).
+
+function serve(X,Y) = R
+	where R is X * Y .
+
+function breakfast_cal(Break_fruit_exc, Break_milk_exc, Break_rice_exc, Break_prot_exc) = M
+	where M is ( Break_fruit_exc * 40 ) + (Break_rice_exc * 100) + (Break_prot_exc * 86) + (Break_milk_exc * 125).
+
+function lunch_cal(Lunch_fruit_exc, Lunch_veg_exc, Lunch_rice_exc, Lunch_prot_exc) = M
+	where M is ( Lunch_fruit_exc * 40 ) + (Lunch_rice_exc * 100) + (Lunch_prot_exc * 86) + (Lunch_veg_exc * 16).
+	
+function dinner_cal(Dinner_fruit_exc, Dinner_veg_exc, Dinner_rice_exc, Dinner_prot_exc) = M
+	where M is ( Dinner_fruit_exc * 40 ) + (Dinner_rice_exc * 100) + (Dinner_prot_exc * 86) + (Dinner_veg_exc * 16).
+	
+function am_snack_cal(Am_snack_rice_exc, Am_snack_prot_exc, Am_snack_fruit_exc) = M
+	where M is ( Am_snack_fruit_exc * 40 ) + (Am_snack_rice_exc * 100) + (Am_snack_prot_exc * 86).	
+	
+function pm_snack_cal(Pm_snack_rice_exc, Pm_snack_prot_exc, Pm_snack_fruit_exc) = M
+	where M is ( Pm_snack_fruit_exc * 40 ) + (Pm_snack_rice_exc * 100) + (Pm_snack_prot_exc * 86).
