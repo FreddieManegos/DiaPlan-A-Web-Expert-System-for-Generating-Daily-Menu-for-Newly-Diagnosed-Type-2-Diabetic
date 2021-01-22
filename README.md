@@ -1,5 +1,5 @@
 # DiaPlan-A-Web-Expert-System-for-Generating-Daily-Menu-for-Newly-Diagnosed-Type-2-Diabetic
 This is a system in completion to the subject IT 199 – Thesis. This proposed expert system will serve as a tool for the patient who has type-2 diabetes in determining the proper daily menu of meals. The  proposed expert system intends to provide alternative approaches to meal management in the absence of the nutritionist/dietitian expert. The expert system shell used in this research is the Flex expert system. Flex is a powerful and flexible software system designed to aid the development and delivery of expert systems. It  is implemented in Prolog and featured Knowledge Specification Language (KSL) that more like standard English, which is very easy to read, than a programming language. Flex contains many constructs ideal for building knowledge-based systems (frames, instances, rules, relations, groups, questions, answers, demons, actions, functions). It can compile and recognize both Flex (.KSL  files) and Prolog (.PL files).
 
-##Landing Page
+## Landing Page
 ![](images/diaplan-landing-page.jpg)
